@@ -23,6 +23,21 @@
          "description":"A relative URL, absolute URL or an ID",
          "minLength":0,
          "maxLength":2000
+      },
+      "type":{
+        "type": "array",
+        "title": "Link Type",
+        "description": "The type of link. Default is URL",
+        "items": {
+            "type": "string",
+            "enum": [
+                "URL",
+                "Category ID",
+                "Product SKU",
+                "Page ID"
+            ]
+        }
+
       }
    }
 }
