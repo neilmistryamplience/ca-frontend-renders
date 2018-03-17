@@ -1,43 +1,47 @@
 {
-   "$schema":"http://bigcontent.io/cms/schema/v1/schema#",
-   "id":"https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/link/content-type/link.json",
-   "title":"Link",
-   "description":"URL action link",
-   "allOf":[
-      {
-         "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/link/content-type/link.json",
+  "title": "Link",
+  "description": "URL action link",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "title": "Label",
+      "description": "The label to be used on display of a link",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "value": {
+      "type": "string",
+      "title": "Value",
+      "description": "A relative URL, absolute URL or an ID",
+      "minLength": 0,
+      "maxLength": 2000
+    },
+    "type": {
+      "type": "array",
+      "title": "Link Type",
+      "description": "The type of link. Default is URL",
+      "items": {
+        "type": "string",
+        "enum": [
+          "URL",
+          "Category ID",
+          "Product SKU",
+          "Page ID"
+        ]
       }
-   ],
-   "type":"object",
-   "properties":{
-      "label":{
-         "type":"string",
-         "title":"Label",
-         "description":"The label to be used on display of a link",
-         "minLength":0,
-         "maxLength":255
-      },
-      "value":{
-         "type":"string",
-         "title":"Value",
-         "description":"A relative URL, absolute URL or an ID",
-         "minLength":0,
-         "maxLength":2000
-      },
-      "type":{
-        "type": "array",
-        "title": "Link Type",
-        "description": "The type of link. Default is URL",
-        "items": {
-            "type": "string",
-            "enum": [
-                "URL",
-                "Category ID",
-                "Product SKU",
-                "Page ID"
-            ]
-        }
-
-      }
-   }
+    }
+  },
+  "propertyOrder": [
+    "label",
+    "type",
+    "value"
+  ]
 }
