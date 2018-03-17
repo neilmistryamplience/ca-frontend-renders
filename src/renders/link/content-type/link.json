@@ -25,18 +25,15 @@
       "maxLength": 2000
     },
     "type": {
-      "type": "array",
+      "type": "string",
       "title": "Link Type",
       "description": "The type of link. Default is URL",
-      "items": {
-        "type": "string",
-        "enum": [
-          "URL",
-          "Category ID",
-          "Product SKU",
-          "Page ID"
-        ]
-      }
+      "enum": [
+        "URL",
+        "Category ID",
+        "Product SKU",
+        "Page ID"
+      ]
     }
   },
   "propertyOrder": [
