@@ -1,6 +1,6 @@
 {
    "$schema":"http://bigcontent.io/cms/schema/v1/schema#",
-   "id":"http://presalesadisws.s3.amazonaws.com/dynamic-content/primark/content-types/link.json",
+   "id":"https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/link/content-type/link.json",
    "title":"Link",
    "description":"URL action link",
    "allOf":[
