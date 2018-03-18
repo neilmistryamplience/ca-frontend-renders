@@ -1,7 +1,7 @@
 {
   "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/text/content-type/text.json",
   "settings": {
-    "label": "Link",
+    "label": "Text",
     "icons": [
       {
         "size": 512,
