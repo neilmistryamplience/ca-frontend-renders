@@ -1,0 +1,26 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/slider/content-type/slider.json",
+  "settings": {
+    "label": "Slider",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/clider/icon/icon-slider.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/slider/index.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ],
+    "cards": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/slider/index.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ]
+  }
+}
