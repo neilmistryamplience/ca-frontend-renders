@@ -26,20 +26,9 @@
       "description": "The background image for the banner",
       "allOf": [
         {
-          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
-        },
-        {
-          "properties": {
-            "contentType": {
-              "title": "Image",
-              "enum": [
-                "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/image/content-type/image.json"
-              ]
-            }
-          }
+          "$ref": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/image/content-type/image.json"
         }
-      ],
-      "_interpolate": true
+      ]
     },
     "header": {
       "type": "string",
