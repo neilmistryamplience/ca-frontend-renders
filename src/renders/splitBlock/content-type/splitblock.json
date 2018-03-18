@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/splitblock/content-type/splitblock.json",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/splitBlock/content-type/splitBlock.json",
   "title": "Split Block",
   "description": "A reusable content type which allows 2 content types to be used together to create a split block",
   "allOf": [
