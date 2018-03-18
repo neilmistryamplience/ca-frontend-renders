@@ -1,0 +1,55 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/splitblock/content-type/splitblock.json",
+  "title": "Split Block",
+  "description": "A reusable content type which allows 2 content types to be used together to create a split block",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "title": "Content",
+      "description": "Content to be used in the split block (left and right)",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/image/content-type/image.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/video/content-type/video.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/text/content-type/text.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "split": {
+      "type": "string",
+      "title": "Split Ratio",
+      "description": "The percentage of display used for the left and right content (left/right)",
+      "enum": [
+        "50/50",
+        "70/30",
+        "30/70"
+      ]
+    }
+  },
+  "propertyOrder": [
+    "content",
+    "split"
+  ]
+}
