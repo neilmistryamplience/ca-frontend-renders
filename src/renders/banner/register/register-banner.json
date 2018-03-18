@@ -1,0 +1,26 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json",
+  "settings": {
+    "label": "Banner",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/icon/icon-banner.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/banner/index.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ],
+    "cards": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/banner/card.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ]
+  }
+}
