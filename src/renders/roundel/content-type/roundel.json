@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "http://presalesadisws.s3.amazonaws.com/dynamic-content/primark/content-types/roundel.json",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/roundel/content-type/roundel.json",
   "title": "Roundel",
   "description": "An additional layer which can be added to an image composite",
   "allOf": [
