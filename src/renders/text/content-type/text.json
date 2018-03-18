@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "http://presalesadisws.s3.amazonaws.com/dynamic-content/primark/content-types/text.json",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/text/content-type/text.json",
   "title": "Text",
   "description": "Re-usable content type which allows for rich text",
   "allOf": [
