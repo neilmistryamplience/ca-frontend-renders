@@ -1,0 +1,43 @@
+{
+   "$schema":"http://bigcontent.io/cms/schema/v1/schema#",
+   "id":"https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/page/content-type/page.json",
+   "title":"Page",
+   "description":"A page which can contain all content types",
+   "allOf":[
+      {
+         "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+      }
+   ],
+   "type":"object",
+   "properties":{
+      "contentTypes":{
+         "type":"array",
+         "title":"Content Type",
+         "description":"Select and order content to display in the page",
+         "items":{
+            "allOf":[
+               {
+                  "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+               },
+               {
+                  "properties":{
+                     "contentType":{
+                        "title":"",
+                        "enum":[
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/slider/content-type/slider.json",
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/video/content-type/video.json",
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/text/content-type/text.json",
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/externalBlock/content-type/externalBlock.json",
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/splitBlock/content-type/splitBlock.json",
+                           "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/image/content-type/image.json",
+                           "http://presalesadisws.s3.amazonaws.com/dynamic-content/primark/content-types/banner.json",
+                           "http://presalesadisws.s3.amazonaws.com/dynamic-content/primark/content-types/bloglist.json"
+                        ]
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   }
+}
