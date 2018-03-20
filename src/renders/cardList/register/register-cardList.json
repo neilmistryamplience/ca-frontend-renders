@@ -1,7 +1,7 @@
 {
   "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/cardList/content-type/cardList.json",
   "settings": {
-    "label": "Card",
+    "label": "Card List",
     "icons": [
       {
         "size": 512,
