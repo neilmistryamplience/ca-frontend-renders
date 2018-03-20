@@ -5,7 +5,7 @@
     "icons": [
       {
         "size": 512,
-        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/icon/icon-page.png"
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/page/icon/icon-page.png"
       }
     ],
     "visualizations": [
