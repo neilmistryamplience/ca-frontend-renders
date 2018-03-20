@@ -21,7 +21,7 @@
     "heroList": {
       "type": "boolean",
       "title": "Hero format",
-      "description":"Hero format supports exactly 3 cards"
+      "description": "Hero format supports exactly 3 cards"
     },
     "cards": {
       "type": "array",
@@ -47,5 +47,10 @@
       "minItems": 1,
       "maxItems": 6
     }
-  }
+  },
+  "propertyOrder": [
+    "header",
+    "heroList",
+    "cards"
+  ]
 }
