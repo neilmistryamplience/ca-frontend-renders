@@ -1,0 +1,385 @@
+{
+	"_embedded": {
+		"content-types": [
+			{
+				"id": "5aa052b7c9e77c000191b90d",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json",
+				"settings": {
+					"label": "Text Block",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-article.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Android App",
+							"templatedUri": "https://appetize.io/embed/5nzyryjp1n14cb95adxrehx51c?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F{{vse.domain}}%22%2C%22contentId%22%3A%22{{content.sys.id}}%22%7D",
+							"default": false
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/text/index.html?headline=/paragraphs/0&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b7c9e77c000191b90d"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b7c9e77c000191b90d"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b7c9e77c000191b90d/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b7c9e77c000191b90d/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052b8c9e77c00017bdd59",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json",
+				"settings": {
+					"label": "Image Block",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-image.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Android App",
+							"templatedUri": "https://appetize.io/embed/5nzyryjp1n14cb95adxrehx51c?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F{{vse.domain}}%22%2C%22contentId%22%3A%22{{content.sys.id}}%22%7D",
+							"default": false
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/gallery/index.html?headline=/editorial/title&image0=/image&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b8c9e77c00017bdd59"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b8c9e77c00017bdd59"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b8c9e77c00017bdd59/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b8c9e77c00017bdd59/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052b9c9e77c00014eb07f",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/video-block.json",
+				"settings": {
+					"label": "Video Block",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-video.png"
+						}
+					],
+					"visualizations": [
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b9c9e77c00014eb07f"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b9c9e77c00014eb07f"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b9c9e77c00014eb07f/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052b9c9e77c00014eb07f/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052bac9e77c000191b90f",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/hero-block.json",
+				"settings": {
+					"label": "Hero Block",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-herobanner.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Android App",
+							"templatedUri": "https://appetize.io/embed/5nzyryjp1n14cb95adxrehx51c?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F{{vse.domain}}%22%2C%22contentId%22%3A%22{{content.sys.id}}%22%7D",
+							"default": false
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/gallery/index.html?headline=/panelContent/editorial/title&image0=/panelContent/image&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c000191b90f"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c000191b90f"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c000191b90f/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c000191b90f/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052bac9e77c00017bdd5b",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/split-block.json",
+				"settings": {
+					"label": "Split Block",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-splitblock.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/summary/index.html?headline=/blockContent/editorial/title&image=/blockContent/image&sub=/blockContent/editorial/text&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c00017bdd5b"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c00017bdd5b"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c00017bdd5b/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bac9e77c00017bdd5b/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052bbc9e77c00014eb081",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/carousel.json",
+				"settings": {
+					"label": "Carousel",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-carousel.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Android App",
+							"templatedUri": "https://appetize.io/embed/5nzyryjp1n14cb95adxrehx51c?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F{{vse.domain}}%22%2C%22contentId%22%3A%22{{content.sys.id}}%22%7D",
+							"default": false
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/gallery/index.html?image0=/slides/0/image&image1=/slides/1/image&image2=/slides/2/image&image3=/slides/3/image&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c00014eb081"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c00014eb081"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c00014eb081/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c00014eb081/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052bbc9e77c000191b911",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/grid.json",
+				"settings": {
+					"label": "Grid",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-grid-mixedmedia.png"
+						}
+					],
+					"visualizations": [
+						{
+							"label": "ANYA FINN Website",
+							"templatedUri": "https://www.anyafinn.store/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": true
+						},
+						{
+							"label": "ANYA FINN Android App",
+							"templatedUri": "https://appetize.io/embed/5nzyryjp1n14cb95adxrehx51c?device=nexus5&scale=100&autoplay=false&orientation=portrait&deviceColor=black&params=%7B%22cms%22%3A%22http%3A%2F%2F{{vse.domain}}%22%2C%22contentId%22%3A%22{{content.sys.id}}%22%7D",
+							"default": false
+						},
+						{
+							"label": "ANYA FINN Website Localhost",
+							"templatedUri": "http://localhost:3000/preview/snapshot?vse={{vse.domain}}&content={{content.sys.id}}",
+							"default": false
+						}
+					],
+					"cards": [
+						{
+							"label": "card",
+							"templatedUri": "https://s3-eu-west-1.amazonaws.com/apps.dev-artifacts.adis.ws/cms-cards/feature-cms2/latest/gallery/index.html?image0=/gridContent/0/image&image1=/gridContent/1/image&image2=/gridContent/2/image&image3=/gridContent/3/image&src=%2F%2F{{vse.domain}}%2Fcms%2Fcontent%2Fquery%3FfullBodyObject%3Dtrue%26query%3D%257B%2522sys.iri%2522%253A%2522http%253A%252F%252Fcontent.cms.amplience.com%252F{{content.sys.id}}%2522%257D%26scope%3Dtree%26store%3Dstaging",
+							"default": true
+						}
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c000191b911"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c000191b911"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c000191b911/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bbc9e77c000191b911/schema"
+					}
+				}
+			},
+			{
+				"id": "5aa052bcc9e77c00017bdd5d",
+				"contentTypeUri": "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/page.json",
+				"settings": {
+					"label": "Page",
+					"icons": [
+						{
+							"size": 256,
+							"url": "https://apps.dev-artifacts.adis.ws/cms-icons/master/latest/256/ca-types-article-image.png"
+						}
+					],
+					"visualizations": [
+					]
+				},
+				"_links": {
+					"self": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bcc9e77c00017bdd5d"
+					},
+					"content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bcc9e77c00017bdd5d"
+					},
+					"effective-content-type": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bcc9e77c00017bdd5d/effective-content-type"
+					},
+					"content-type-schema": {
+						"href": "https://api.amplience.net/v2/content/content-types/5aa052bcc9e77c00017bdd5d/schema"
+					}
+				}
+			}
+		]
+	},
+	"_links": {
+		"first": {
+			"href": "https://api.amplience.net/v2/content/hubs/5aa052aec9e77c00014eb07d/content-types?page=0&size=20"
+		},
+		"self": {
+			"href": "https://api.amplience.net/v2/content/hubs/5aa052aec9e77c00014eb07d/content-types"
+		},
+		"last": {
+			"href": "https://api.amplience.net/v2/content/hubs/5aa052aec9e77c00014eb07d/content-types?page=0&size=20"
+		},
+		"search": {
+			"href": "https://api.amplience.net/v2/content/hubs/5aa052aec9e77c00014eb07d/content-types/search"
+		}
+	},
+	"page": {
+		"size": 20,
+		"totalElements": 8,
+		"totalPages": 1,
+		"number": 0
+	}
+}
