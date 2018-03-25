@@ -1,0 +1,14 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/slots/page-slot.json",
+  "settings": {
+    "label": "Page Slot",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/page/icon/icon-page.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  }
+}
