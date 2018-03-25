@@ -1,0 +1,14 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blogSnippet/content-type/blogSnippet.json",
+  "settings": {
+    "label": "Banner",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blogSnippet/icon/icon-blogSnippet.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  }
+}

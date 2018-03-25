@@ -1,0 +1,36 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blog/content-type/blog.json",
+  "settings": {
+    "label": "Blog",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blog/icon/icon-blog.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/blog/index.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      },
+      {
+        "label": "Snippet",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/blog/snippet.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": false
+      },
+      {
+        "label": "Twitter",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/blog/twitter.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": false
+      }
+    ],
+    "cards": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/blog/index.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ]
+  }
+}

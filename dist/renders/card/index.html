@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Card</title>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../reusable/css/global.css"/>
     <link rel="stylesheet" href="../../../dist/renders/card/card.min.css"/>
     <link rel="stylesheet" href="../../../dist/renders/image/image.min.css"/>
 
@@ -17,15 +18,13 @@
 </head>
 <body>
 
-<div class="js_card_wrap" style="max-width:1024px; margin:20px auto;"></div>
+<div class="js_card_wrap"></div>
 
 <script src="../../reusable/cms-javascript-sdk.min.js"></script>
 
 <script src="../../reusable/handlebars.min.js"></script>
 
 <script src="../../reusable/utils.js"></script>
-
-<script src="../../reusable/renderTypes.js"></script>
 
 <script src="../../reusable/handlebars_helpers.js"></script>
 
@@ -45,9 +44,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.card);
-            document.querySelectorAll(".js_card_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_card_wrap")[0].innerHTML = template(data);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

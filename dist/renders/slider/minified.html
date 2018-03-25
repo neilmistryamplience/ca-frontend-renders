@@ -39,9 +39,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.slider);
-            document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data);
             loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
             AmpCa.utils.postProcessing.exec('slider', {});
 

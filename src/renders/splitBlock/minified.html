@@ -39,9 +39,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.splitBlock);
-            document.querySelectorAll(".js_splitBlock_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_splitBlock_wrap")[0].innerHTML = template(data);
 
             AmpCa.utils.postProcessing.exec('splitBlock');
 

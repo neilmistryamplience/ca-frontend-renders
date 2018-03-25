@@ -4,15 +4,12 @@
     } else if (typeof exports === 'object') {
         module.exports = factory();
     } else {
-        var renderTypes = typeof root.renderTypes !== 'undefined' ? root.renderTypes : undefined;
         var Hbars = typeof root.Handlebars !== 'undefined' ? root.Handlebars : undefined;
-        factory()(Hbars || null, renderTypes || null);
+        factory()(Hbars || null);
     }
 }(this, function () {
-    return function(Hbars, renderTps){
-        if(renderTps && typeof renderTypes  === 'undefined'){
-            var renderTypes = renderTps;
-        }
+    return function(Hbars){
+
         if(Hbars && typeof Handlebars === 'undefined'){
             Handlebars = Hbars;
         }
@@ -26,28 +23,15 @@
             });
 
             Handlebars.registerHelper('dynamicTemplate', function (id, renderTypes, context, addTemplateClassname) {
-                if (id === false) {
-                    id = context['@type'];
+                if (id === undefined || id === false) {
+                    id = context['_meta'].schema;
                 }
 
-                if (renderTypes) {
-                    context.renderTypes = renderTypes;
-                }
+                var parsedId = id.indexOf('/') === -1 ? id : id.substring(id.lastIndexOf('/') + 1, id.length-5);
 
-                else {
-                    renderTypes = context.renderTypes;
-                }
-
-                var parsedId = id.indexOf('/') === -1 ? id : id.substring(id.lastIndexOf('/') + 1, id.length);
                 var matchedTemplate;
-                for (var name in renderTypes) {
-                    if (parsedId === renderTypes[name]) {
-                        matchedTemplate = Handlebars.partials[name].length
-                            ? Handlebars.partials[name]
-                            : Handlebars.template(Handlebars.partials[name]);
-                        break;
-                    }
-                }
+                matchedTemplate = Handlebars.partials[parsedId].length ? Handlebars.partials[parsedId] : Handlebars.template(Handlebars.partials[parsedId]);
+
                 if (!matchedTemplate) {
                     return "Template matching id: " + id + ' not found';
                 }
@@ -57,9 +41,6 @@
             });
 
             Handlebars.registerHelper('matchType', function (id, renderName, opts) {
-                if (!renderTypes) {
-                    return new Handlebars.SafeString('renderTypes are undefined');
-                }
 
                 var parsedId = id.indexOf('/') === -1 ? id : id.substring(id.lastIndexOf('/') + 1, id.length);
                 if (renderTypes[renderName] === parsedId) {

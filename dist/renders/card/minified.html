@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="js_card_wrap" style="max-width:1024px; margin:20px auto;"></div>
+<div class="js_card_wrap"></div>
 
 <!-- All libs -->
 <script src="../../../dist/renders/all/libs.min.js"></script>
@@ -38,9 +38,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.card);
-            document.querySelectorAll(".js_card_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_card_wrap")[0].innerHTML = template(data);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

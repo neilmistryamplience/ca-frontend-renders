@@ -20,6 +20,8 @@ var addSrc = require("gulp-add-src");
 
 var connect = require('gulp-connect');
 var watch = require('gulp-watch');
+
+var gutil = require('gulp-util');
 var name;
 
 var dependencies = require('./dependencies.json');
@@ -31,7 +33,7 @@ var excludeReusable = {
     slider: '!./dist/reusable/lory.js'
 };
 
-var reusable = './dist/reusable/*.js';
+var reusable = './dist/reusable/*';
 
 gulp.task('addDependencies', ['build'], function () {
     for (var module in dependencies) {
@@ -118,11 +120,13 @@ gulp.task('concatAll', ['build'], function () {
 
     gulp.src(['./dist/reusable/*.js', './src/renders/slider/js/sliderHelper.js', '!./dist/reusable/lory.min.js', '!./dist/reusable/showdown.min.js'])
         .pipe(uglify())
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(addSrc.append(['./dist/reusable/lory.min.js', './dist/reusable/showdown.min.js']))
         .pipe(concat("libs.min.js"))
         .pipe(gulp.dest('./dist/renders/all'));
 
-    gulp.src(['./dist/renders/*/*.min.css'])
+    gulp.src(['./dist/reusable/css/*.css', './dist/renders/*/*.min.css'])
+        .pipe(cleanCSS())
         .pipe(concat("styles.min.css"))
         .pipe(gulp.dest('./dist/renders/all'));
 });
@@ -131,6 +135,11 @@ gulp.task('del', function () {
     return del.sync([
         'dist'
     ]);
+});
+
+gulp.task('reusable-css', function () {
+    return gulp.src(['src/reusable/**/*.css'])
+        .pipe(gulp.dest('dist/reusable'));
 });
 
 gulp.task('renders-html', function () {
@@ -206,15 +215,6 @@ gulp.task('renders-js-copy', function () {
 
 gulp.task('renders-types-copy', function () {
     return gulp.src(['src/renders/**/*.json'])
-        .pipe(rename(function (path) {
-            var name = path.dirname;
-            path.dirname = name + '/package';
-        }))
-        .pipe(gulp.dest('dist/renders'))
-});
-
-gulp.task('renders-files-copy', function () {
-    return gulp.src(['src/renders/**/visualisation.html'])
         .pipe(rename(function (path) {
             var name = path.dirname;
             path.dirname = name + '/package';
@@ -330,8 +330,8 @@ gulp.task('copy-viewer-kit-modules', function () {
         .pipe(gulp.dest('src/pdp/js'));
 });
 
-gulp.task('renders-build', ['renders-html', 'renders-sass', 'renders-templates', 'renders-readme-copy',
-    'renders-js-copy', 'renders-files-copy', 'renders-types-copy', 'renders-js-min'], function () {
+gulp.task('renders-build', ['reusable-css', 'renders-html', 'renders-sass', 'renders-templates', 'renders-readme-copy',
+    'renders-js-copy', 'renders-types-copy', 'renders-js-min'], function () {
 });
 
 gulp.task('build', ['del', 'copy-node-modules', 'addLoryLicense', 'addShowdownLicense', 'reusable-js-min', 'renders-build'], function () {

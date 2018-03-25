@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <title>Text</title>
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../reusable/css/global.css"/>
+    
     <link rel="stylesheet" href="../../../dist/renders/text/text.min.css"/>
-
+    
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <style>
         * {
@@ -53,7 +57,7 @@
         },
         callback: function (data) {
             var template = Handlebars.template(AmpCa.templates.text);
-            document.querySelectorAll(".js_text_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_text_wrap")[0].innerHTML = template(data);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

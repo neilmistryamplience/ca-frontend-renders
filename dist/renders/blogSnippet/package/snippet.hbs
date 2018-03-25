@@ -1,0 +1,52 @@
+
+{{#with snippet}}
+<div class="amp-ca-blogsnippet">
+<div class="featureThreeRowsContainer featureRows-table">
+<div class="featureRow featureRow-column-cell firstFeature">
+   <div class="image-square">
+   		{{#with image}}
+   			<picture class="amp-ca-image">
+		        {{#roundelProperties}}
+		            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=514{{#if poi}}&$poi$&aspect=1:1{{else}}&h=514{{/if}}&$roundel$&{{roundelConfig roundel}}" type="image/webp">
+		            <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=514{{#if poi}}&$poi$&aspect=1:1{{else}}&h=514{{/if}}&$roundel$&{{roundelConfig roundel}}"
+		                 class="amp-ca-image-pic" {{#if imageAltText}} alt = "{{imageAltText}}" {{/if}}/>
+		        {{else}}
+		            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=514{{#if poi}}&$poi$&aspect=1:1{{else}}&h=514{{/if}}" type="image/webp">
+		            <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=514{{#if poi}}&$poi$&aspect=1:1{{else}}&h=514{{/if}}"
+		                 class="amp-ca-image-pic" {{#if imageAltText}} alt = "{{imageAltText}}" {{/if}}/>
+		        {{/roundelProperties}}
+		    </picture>
+   		{{/with}}
+      <a class="redirectURL resizeLinkMask" href=""></a>
+      
+   </div>
+   <div class="descriptionBox">
+      <div class="box-category">
+      	{{#each category}}
+      		<h3 class="category-smallText">{{this}}</h3>
+         	<span class="line"></span>
+		{{/each}}
+      </div>
+
+      {{#if title}}
+      	<h2 class="box-title">{{title}}</h2>
+      {{/if}}
+      {{#if blogdate}}
+      	<div class="publishDate">{{blogdate}}</div>
+      {{/if}}
+      {{#if description}}
+      	<p class="box-shortDescription">{{description}}</p>
+      {{/if}}
+
+      <a class="redirectURL resizeLinkMask" href=""></a>
+   </div>
+{{/with}}
+
+   <div class="buttonBox firstFeature">
+      <a class="box-ctaButton feature-button redirectURL" href="{{urlfromid this}}">Read More</a>
+   </div>
+   {{#with snippet}}
+</div>
+</div>
+</div>
+{{/with}}

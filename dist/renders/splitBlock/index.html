@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>splitBlock</title>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../reusable/css/global.css"/>
     <link rel="stylesheet" href="../../../dist/renders/splitBlock/splitBlock.min.css"/>
     <link rel="stylesheet" href="../../../dist/renders/text/text.min.css"/>
     <link rel="stylesheet" href="../../../dist/renders/image/image.min.css"/>
@@ -29,7 +30,6 @@
 <script src="../../reusable/showdown.min.js"></script>
 
 <script src="../../reusable/utils.js"></script>
-<script src="../../reusable/renderTypes.js"></script>
 
 <script src="../../reusable/handlebars_helpers.js"></script>
 
@@ -50,9 +50,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.splitBlock);
-            document.querySelectorAll(".js_splitBlock_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_splitBlock_wrap")[0].innerHTML = template(data);
 
             AmpCa.utils.postProcessing.exec('splitBlock');
 

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/roundel/content-type/roundel.json",
+  "title": "Roundel",
+  "description": "An additional layer which can be added to an image composite",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "roundel": {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "roundelRatio": {
+      "type": "number",
+      "title": "Roundel Ratio",
+      "description": "A value between 0 and 10 e.g. 0.6"
+    },
+    "roundelPosition": {
+      "title": "Roundel Position",
+      "description": "Position of roundel in content",
+      "type": "string",
+      "enum": [
+        "Top Left",
+        "Top Right",
+        "Bottom Left",
+        "Bottom Right"
+      ]
+    }
+  }
+}

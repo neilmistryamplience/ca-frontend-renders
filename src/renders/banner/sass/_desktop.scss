@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  min-width: 400px;
   * {
     margin: 0;
     padding: 0;
@@ -32,22 +31,29 @@
   .amp-ca-banner-img {
     width: 100%;
     display: block;
+    text-align: center; 
   }
 
   .amp-ca-banner-info-wrap {
     color: #fff;
-    width: 33.3%;
+    width: 40%;
     height: 100%;
     position: absolute;
     top: 0;
     white-space: normal;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
 
     &[data-align='left'] {
       left: 65px;
+      margin:0;
     }
 
     &[data-align='right'] {
       right: 65px;
+      margin:0;
     }
 
     &:before {

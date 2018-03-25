@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Video</title>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../reusable/css/global.css"/>
     <link rel="stylesheet" href="../../../dist/renders/video/video.min.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -41,7 +42,7 @@
         },
         callback: function (data) {
             var template = Handlebars.template(AmpCa.templates.video);
-            document.querySelectorAll(".js_video_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_video_wrap")[0].innerHTML = template(data);
 
             AmpCa.utils.postProcessing.exec('video');
 

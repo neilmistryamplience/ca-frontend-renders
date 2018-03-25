@@ -40,9 +40,8 @@
             store: 'csdemo'
         },
         callback: function (data) {
-            data[0].renderTypes = renderTypes;
             var template = Handlebars.template(AmpCa.templates.cardList);
-            document.querySelectorAll(".js_card_list_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_card_list_wrap")[0].innerHTML = template(data);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

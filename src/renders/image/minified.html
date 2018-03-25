@@ -38,7 +38,7 @@
         },
         callback: function (data) {
             var template = Handlebars.template(AmpCa.templates.image);
-            document.querySelectorAll(".js_image_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_image_wrap")[0].innerHTML = template(data);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));
