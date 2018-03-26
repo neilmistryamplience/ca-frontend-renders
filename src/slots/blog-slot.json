@@ -1,0 +1,32 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/slots/blog-slot.json",
+  "title": "Blog Slot",
+  "description": "Slot that allows a Blog",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "Content": {
+      "title": "Content",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "contentType",
+              "enum": [
+                "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blog/content-type/blog.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

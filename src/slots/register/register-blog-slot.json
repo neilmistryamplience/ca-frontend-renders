@@ -1,0 +1,14 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/slots/blog-slot.json",
+  "settings": {
+    "label": "Blog Slot",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blog/icon/icon-blog.png"
+      }
+    ],
+    "visualizations": [],
+    "cards": []
+  }
+}
