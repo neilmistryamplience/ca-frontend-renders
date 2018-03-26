@@ -1,0 +1,10 @@
+<a href="{{link.value}}" title="{{title}}">
+    <li class="dc-slider__slide">
+        <img
+            {{#with mobileImg}} src="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg" {{/with}}
+            {{#with desktopImg}} data-big="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg" {{/with}}
+            class="respImg" 
+            alt="{{title}}" 
+        />
+    </li>
+</a>
