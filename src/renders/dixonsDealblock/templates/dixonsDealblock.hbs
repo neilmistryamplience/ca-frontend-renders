@@ -1,0 +1,7 @@
+<a href="{{link.value}}" data-campaign-type="savings" title="{{title}}">
+    <figure>
+        {{#with image}}
+        <img src="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=600" srcset="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=300 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=600 2x,
+                 https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=300 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=600 2x" class="amp-ca-image-pic" {{#if title}} alt="{{title}}" title="{{title}}" {{/if}} /> {{/with}}
+    </figure>
+</a>
