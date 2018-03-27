@@ -1,0 +1,65 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsQuicklink/content-type/dixonsQuicklink.json",
+  "title": "Dixons Quick Link",
+  "description": "A Quicklink",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "actionName": {
+      "type": "string",
+      "title": "Action Name",
+      "description": "The action name for this quicklink. Default is 'Shop'",
+      "validation": "Please enter less than 255 characters",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "promoName": {
+      "type": "string",
+      "title": "Promotion Name",
+      "description": "The promotion name for this quicklink. This text is highlighted",
+      "validation": "Please enter less than 255 characters",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "location": {
+      "type": "string",
+      "title": "Location",
+      "description": "The location for this quicklink. Default is 'in'",
+      "validation": "Please enter less than 255 characters",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "description": "The category this quicklink relates to",
+      "validation": "Please enter less than 255 characters",
+      "minLength": 0,
+      "maxLength": 255
+    },
+
+    "link": {
+      "type": "object",
+      "title": "Link",
+      "description": "The link for this slide. Note that the label will not be displayed",
+      "allOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/link/content-type/link.json"
+        }
+      ],
+      "_interpolate": true
+    }
+  },
+  "propertyOrder": [
+    "actionName",
+    "promoName",
+    "location",
+    "category"
+    "link"
+  ]
+}
