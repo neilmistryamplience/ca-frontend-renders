@@ -1,7 +1,7 @@
 {
   "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsCarousel/content-type/dixonsCarousel.json",
   "settings": {
-    "label": "Dixons Slide",
+    "label": "Dixons Carousel",
     "icons": [
       {
         "size": 512,

@@ -1,13 +1,10 @@
-<a href="{{link.value}}" title="{{title}}">
-    <li class="dc-slider__slide">
-        <picture class="amp-ca-image">
-            {{#with desktopImg}}
-            <source srcset="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=700 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=930 2x" media="(min-width: 600px)" type="image/webp">
-            <source srcset="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=700 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=930 2x" media="(min-width: 600px)">
-                {{/with}}
-                {{#with mobileImg}}
-            <img src="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=335" srcset="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=335 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=650 2x,
-                 https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=335 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=650 2x" class="amp-ca-image-pic" {{#if title}} alt="{{title}}" title="{{title}}" {{/if}} /> {{/with}}
-        </picture>
-    </li>
-</a>
+<div class="dc-tabbed-slider" id="dc-tabbed-slider-1" data-startposition="0" data-options="progress: true, tabs: false, nav: true, dots: true, autoplayTimeout: 5000" data-responsive_850="progress: true, tabs: true, nav: false, dots: false">
+    <ul class="dc-slider__slides">
+        {{#each slides}} {{dynamicTemplate renderTypes.dixonsSlide renderTypes this}} {{/each}}
+    </ul>
+    <ul class="dc-slider__tabs">
+        {{#each slides}}
+        <li class="dc-slider__tab"><span data-slide="{{@index}}">{{title}}</span> </li>
+        {{/each}}
+    </ul>
+</div>
