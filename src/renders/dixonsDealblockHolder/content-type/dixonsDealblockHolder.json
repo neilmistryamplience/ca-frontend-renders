@@ -1,0 +1,38 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsDealblockHolder/content-type/dixonsDealblockHolder.json",
+  "title": "Dixons Deal Block Holder",
+  "description": "Contains Deals",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "deals": {
+      "type": "array",
+      "title": "Deals",
+      "description": "Select Deals",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsDealblock/content-type/dixonsDealblock.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 9
+    }
+  }
+}

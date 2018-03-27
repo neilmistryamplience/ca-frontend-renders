@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dixons Deal Block Holder</title>
+    <!-- Dixons Code -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png">
+    <link rel="SHORTCUT ICON" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico">
+    <link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png">
+    <link rel="canonical" href="https://www.currys.co.uk/gbuk/index.html">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if IE]>
+        <meta http-equiv="imagetoolbar" content="false">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <![endif]-->
+    <meta name="description" xml:lang="en-GB" lang="en-GB" content="Massive Range of TVs, Washing Machines, Cookers, Cameras, Laptops, Tablets &amp; more. ✓ Free Home Delivery or ✓ Reserve Online &amp; Collect In-Store">
+    <meta name="keywords" xml:lang="en-GB" lang="en-GB" content="Currys,curry,currys.co.uk,curries,currys stores,currys electrical,currie,washing machines,ipods,dishwashers,televisions,tvs,fridges,fridge freezers,laptops,cookers,computers,sat nav,dvd players,blu ray players,home cinema,mobile broadband,mobile phones,cameras,digital cameras,hifis,playstation 3,xbox,Nintendo wii,gps,ovens,microwaves,tumble dryers,washer dryers,fridge freezers,gas cookers,range cookers,kettles,toasters,health grills,bread makers,fryers,coffee makers,vacuum cleaners,irons,heaters,fans,air con,hair dryers,tvs,projectors,netbooks,desktop pcs,pc monitors,printers,data storage,networking,mobile phones,home phones,fax machines,radios,pc gaming,free delivery">
+    <meta name="robots" content="index, follow">
+    <!--[if lte IE 8]>
+<link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/style2.css" media="screen">
+<script src="https://currys-ssl.cdn.dixons.com/js/ie8-print-fix.min.js"></script>
+<![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/style.css?v=1521788042" media="screen">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/components.css" media="screen">
+    <link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/print.css" media="print">
+    <script src="https://currys-ssl.cdn.dixons.com/js/platform.js"></script>
+    <link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/themes/home.css" media="screen">
+    <link href="https://cloud.typography.com/735596/652002/css/fonts.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://currys-ssl.cdn.dixons.com/css/themes/Homepage/wk47/css/wk47-homepage.css" media="screen" />
+    <script data-fuseaction="home" src="https://currys-ssl.cdn.dixons.com/js/vendorIndex.js?v=1521788042"></script>
+    <!-- End Dixons Code -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../reusable/css/global.css" />
+    <link rel="stylesheet" href="../../../dist/renders/dixonsQuicklink/dixonsDealblock.min.css" />
+    <link rel="stylesheet" href="../../../dist/renders/dixonsQuicklinkHolder/dixonsDealblockHolder.min.css" />
+    
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="js_dixonsDealblockHolder_wrap"></div>
+    <!-- build:js ../../reusable/cms-javascript-sdk.min.js -->
+    <script src="../../../node_modules/cms-javascript-sdk/dist/cms-javascript-sdk.min.js"></script>
+    <!-- /build -->
+    <!-- build:js ../../reusable/handlebars.min.js -->
+    <script src="../../../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <!-- /build -->
+    <!-- build:js ../../reusable/utils.js -->
+    <script src="../../reusable/js/utils.js"></script>
+    <!-- /build -->
+    <!-- build:js ../../reusable/handlebars_helpers.js -->
+    <script src="../../reusable/js/handlebars_helpers.js"></script>
+    <!-- /build -->
+    <!-- This is a compiled template-->
+    <script src="../../../dist/renders/dixonsQuicklink/template.dixonsDealblock.min.js"></script>
+    <script src="../../../dist/renders/dixonsQuicklinkHolder/template.dixonsDealblockHolder.min.js"></script>
+    
+    <script>
+    function loadScript(url, callback) {
+
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState) { //IE
+            script.onreadystatechange = function() {
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function() {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+
+
+    Handlebars.partials = AmpCa.templates;
+    //AmpCa is global namespace generated by handlebars compiler
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getCaData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: 'bc440496-d1c8-4a97-a7ba-fb5c315442a8',
+            store: 'csdemo'
+        },
+        callback: function(data) {
+            //data[0].renderTypes = renderTypes;
+            var template = Handlebars.template(AmpCa.templates.dixonsQuicklinkHolder);
+            document.querySelectorAll(".js_dixonsDealblockHolder_wrap")[0].innerHTML = template(data);
+
+            // Must load script after content otherwise carousel does not load
+            loadScript('https://currys-ssl.cdn.dixons.com/js/othersIndex.js?v=1521817445')
+        },
+        formatData: function(data) {
+            return amp.inlineContent(JSON.parse(data));
+        }
+    });
+    </script>
+</body>
+
+</html>

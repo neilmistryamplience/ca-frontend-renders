@@ -1,0 +1,26 @@
+{
+  "contentTypeUri": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsDealblockHolder/content-type/dixonsDealblockHolder.json",
+  "settings": {
+    "label": "Dixons Deal Block Holder",
+    "icons": [
+      {
+        "size": 512,
+        "url": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsDealblockHolder/icon/icon-dixonsDealblockHolder.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/dixonsDealblockHolder/minified.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ],
+    "cards": [
+      {
+        "label": "Default",
+        "templatedUri": "https://presalesadisws.s3.amazonaws.com/demo/nm/dynamic-content/dist/renders/dixonsDealblockHolder/minified.html?api={{vse.domain}}&content={{content.sys.id}}",
+        "default": true
+      }
+    ]
+  }
+}
