@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dixons Quicklink</title>
+    <title>Dixons Quick Link Holder</title>
     <!-- Dixons Code -->
     <link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png">
     <link rel="SHORTCUT ICON" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico">
@@ -48,7 +48,7 @@
 </head>
 
 <body>
-    <div class="homepage-wrapper quick-links"><ul><li class="js_dixonsQuicklink_wrap"></li></ul></div>
+    <div class="js_dixonsQuicklinkHolder_wrap"></div>
     <!-- All libs -->
     <script src="../../../dist/renders/all/libs.min.js"></script>
     <!-- All templates -->
@@ -89,8 +89,8 @@
             store: 'csdemo'
         },
         callback: function(data) {
-            var template = Handlebars.template(AmpCa.templates.dixonsQuicklink);
-            document.querySelectorAll(".js_dixonsQuicklink_wrap")[0].innerHTML = template(data);
+            var template = Handlebars.template(AmpCa.templates.dixonsQuicklinkHolder);
+            document.querySelectorAll(".js_dixonsQuicklinkHolder_wrap")[0].innerHTML = template(data);
 
             // Must load script after content otherwise carousel does not load
             loadScript('https://currys-ssl.cdn.dixons.com/js/othersIndex.js?v=1521817445')
