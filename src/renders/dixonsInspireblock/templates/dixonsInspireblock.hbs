@@ -1,0 +1,10 @@
+<a href="{{link.value}}" title="{{title}}">
+    <figure> {{#with image}}
+        <img src="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=350" srcset="https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=350 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.webp?w=350 2x,
+                 https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=350 1x, https://{{defaultHost}}/i/{{endpoint}}/{{name}}{{#if title}}/{{escapeUrl title}}{{/if}}.jpg?w=350 2x" class="amp-ca-image-pic" {{#if title}} alt="{{title}}" title="{{title}}" {{/if}} /> {{/with}}
+        <figcaption>
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+        </figcaption>
+    </figure>
+</a>
