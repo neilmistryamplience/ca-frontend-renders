@@ -1,12 +1,36 @@
-<div class="amp-ca-blog js_ca_blog">
-	{{#with snippet}}
-    	<div class="amp-ca-blog-snippet-wrap">
-        	{{dynamicTemplate [@type] ../renderTypes this}}
-    	</div>
-    {{/with}}
-    <div class="amp-ca-blog-content">
-        {{#each contentTypes}}
-            <div class="amp-ca-block-wrap">{{dynamicTemplate [@type] ../renderTypes this}}</div>
-        {{/each}}
+<div class="amp-ca-homepage{{#if snippet}} amp-ca-homepage-blog{{/if}}">
+    {{#with snippet}}
+    <div class="amp-ca-snippet js_ca_snippet">
+        {{#each category}}
+        <div class="amp-ca-category-container">
+            <div class="amp-ca-category">{{this}}</div>
+            <span class="line"></span>
+        </div>
+        {{/each}} {{#if blogdate}}
+        <div class="amp-ca-blogdate">{{blogdate}}</div>
+        {{/if}} {{#if author}}
+        <div class="amp-ca-author">{{author}}</div>
+        {{/if}} {{#if title}}
+        <div class="amp-ca-title">{{title}}</div>
+        {{/if}} {{#if description}}
+        <div class="amp-ca-description">{{description}}</div>
+        {{/if}} {{#if image}}
+        <div class="amp-ca-image">
+            {{dynamicTemplate ../../renderTypes.image ../../renderTypes image}}
+        </div>
+        {{/if}}
     </div>
+    {{/with}} {{#if snippet}}
+    <div class="amp-ca-blocks-container">
+        {{/if}} {{#each contentTypes}}
+        <div class="amp-ca-block-wrap">{{dynamicTemplate [@type] ../renderTypes this}}</div>
+        {{/each}} {{#if snippet}}
+    </div>
+    {{/if}} {{#with snippet}}
+    <ul class="post-tags tags">
+        {{#each keywords}}
+        <li class="post-tag tag"><span>{{this}}</span></li>
+        {{/each}}
+    </ul>
+    {{/with}}
 </div>

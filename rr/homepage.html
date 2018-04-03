@@ -1,0 +1,131 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 lt-ie7 lt-ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 lt-ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en-GB"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-GB" class="js">
+<!--<![endif]-->
+
+<head>
+    <title>Rich Relevance Demo - HP</title>
+    <meta charset="utf-8">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <!-- Amplience CSS -->
+    <link rel="stylesheet" href="../dist/renders/all/styles.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Amplience JS -->
+    <!-- All libs -->
+    <script src="../dist/renders/all/libs.min.js"></script>
+    <!-- All templates -->
+    <script src="../dist/renders/all/templates.min.js"></script>
+
+
+
+
+    
+</head>
+
+<body>
+    <h1>Homepage</h1>
+    <!-- Start DSP -->
+    <!-- This is where the Amplience page slot will go -->
+    <div class="main js_page_wrap">
+    </div>
+    <!-- RR Scripts -->
+    <script src="//media.richrelevance.com/rrserver/js/1.2/p13n.js"></script>
+    <script charset="utf-8" type="text/javascript">
+      var R3_COMMON = new r3_common();
+      R3_COMMON.setApiKey('showcasedemo');
+      R3_COMMON.setBaseUrl(window.location.protocol+'//recs.richrelevance.com/rrserver/');
+      R3_COMMON.setClickthruServer(window.location.protocol+"//"+window.location.host);
+      R3_COMMON.setSessionId('6B4D397B');
+      R3_COMMON.setUserId('10987');            // keep both session/user the same  
+
+      R3_COMMON.addPlacementType('home_page.amplience_1');
+      /*
+      future use 
+      R3_COMMON.addPlacementType('home_page.amplience_2');
+      R3_COMMON.addPlacementType('home_page.amplience_3');*/
+      var R3_HOME = new r3_home();
+      rr_flush_onload();
+      r3();
+    </script> 
+    <!-- Amplience Script -->
+    <script>
+
+    window.amp.rr_cb =function(rrobj){
+        // This will be the data from RR about what to display. Single Record
+        console.log('test')
+        console.log(rrobj);
+
+
+        // Load from HTML service - https://c1.adis.ws/v1/content/dcdemo/content-item/6627dd12-42bc-4372-9664-3383d027979f?template=image-block
+        var amp
+
+
+        AmpCa.utils.getCaData({
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: rrobj[0].amplience_id, // '8877c626-c431-4b78-bae1-cb4ae4758d70',//'aeef66c6-8ddb-4825-b515-289d9c7268be'
+            store: 'dcdemo'
+        },
+        callback: function(data) {
+            console.log('we have the data')
+            console.log(data.editorial.title);
+
+
+
+
+            
+            /**var template = Handlebars.template(AmpCa.templates.page);
+            document.querySelectorAll(".js_page_wrap")[0].innerHTML = template(data);
+
+            loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
+            AmpCa.utils.postProcessing.exec('page', {});**/
+
+        },
+        formatData: function(data) {
+            return amp.inlineContent(JSON.parse(data));
+        }
+    });
+    }
+
+
+    function loadScript(url, callback) {
+
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState) { //IE
+            script.onreadystatechange = function() {
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function() {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    Handlebars.partials = AmpCa.templates;
+    AmpCa.utils = new AmpCa.Utils();
+
+
+
+    
+    </script>
+    <!-- End DSP -->
+</body>
+
+</html>

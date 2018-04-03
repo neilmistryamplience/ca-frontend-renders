@@ -8,6 +8,10 @@
     padding: 0;
   }
 
+  .amp-ca-image img{
+    max-height:500px;
+  }
+
   .amp-ca-card-text-wrap {
     margin-top: 10px;
     text-align: center;
@@ -22,6 +26,7 @@
     color: #8F8F8F;
     display: inline-block;
     margin-bottom: 5px;
+    font-size: 16px;
   }
   .amp-ca-card-link-holder {
     margin-bottom: 5px;

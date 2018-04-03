@@ -1,112 +1,26 @@
 <div class="amp-ca-image-holder">
-<picture class="amp-ca-image">
+    <picture class="amp-ca-image">
+        {{#iff display '==' 'Static'}}
+            <img src="//neildemo.a.bigcontent.io/v1/static/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}" class="amp-ca-image-pic" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}} {{#if seoText}} title="{{seoText}}" {{/if}} /> 
+        {{/iff}} 
+        {{#iff display '!=' 'Static'}}
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 1280px)" type="image/webp">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 1280px)">
 
-    {{#roundelProperties}}
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 1280px)"
-                type="image/webp">
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 1280px)">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1280{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2560{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 1024px)" type="image/webp">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1280{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2560{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 1024px)">
 
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1280&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2560&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 1024px)"
-                type="image/webp">
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1280&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2560&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 1024px)">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1024{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1.5:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2048{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1.5:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 768px)" type="image/webp">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1024{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1.5:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2048{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1.5:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(min-width: 768px)">
 
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1024&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2048&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 768px)"
-                type="image/webp">
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1024&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2048&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(min-width: 768px)">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=768{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1536{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(max-width: 768px)" type="image/webp">
+        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=768{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1536{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=1:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" media="(max-width: 768px)">
 
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=768&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1536&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(max-width: 768px)"
-                type="image/webp">
-        <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=768&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1536&$roundel$&{{roundelConfig roundel}} 2x"
-                media="(max-width: 768px)">
-
-        <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600&$roundel$&{{roundelConfig roundel}}"
-             srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200&$roundel$&{{roundelConfig roundel}} 2x,
-             //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600&$roundel$&{{roundelConfig roundel}} 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200&$roundel$&{{roundelConfig roundel}} 2x"
-             class="amp-ca-image-pic" {{#if imageAltText}} alt="{{imageAltText}}" title="{{seoText}}" {{/if}}/>
-    {{else}}
-        {{#if display}}
-            {{#iff display '==' 'Static'}}
-                <h1>Static</h1>
-                <img src="//neildemo.a.bigcontent.io/v1/static/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}"
-                 class="amp-ca-image-pic" {{#if imageAltText}} alt = "{{imageAltText}}" title="{{seoText}}" {{/if}}/>
-            {{/iff}}
-            {{#iff display '==' 'Point of Interest'}}
-                <h1>Point Of Interest</h1>
-            {{/iff}}
-
-            {{#iff display '==' 'Hotspots'}}
-                <h1>Hotspots</h1>
-                <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200 2x"
-                media="(min-width: 1280px)"
-                type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200 2x"
-                    media="(min-width: 1280px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1280 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2560 2x"
-                    media="(min-width: 1024px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1280 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2560 2x"
-                    media="(min-width: 1024px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1024 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2048 2x"
-                    media="(min-width: 768px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1024 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2048 2x"
-                    media="(min-width: 768px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=768 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1536 2x"
-                    media="(max-width: 768px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=768 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1536 2x"
-                    media="(max-width: 768px)">
-
-            <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600"
-                 srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200 2x,
-                 //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200 2x"
-                 class="amp-ca-image-pic" {{#if imageAltText}} alt = "{{imageAltText}}" title="{{seoText}}" {{/if}}/>
-            {{/iff}}
-        {{else}}
-             <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200 2x"
-                media="(min-width: 1280px)"
-                type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200 2x"
-                    media="(min-width: 1280px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1280 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2560 2x"
-                    media="(min-width: 1024px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1280 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2560 2x"
-                    media="(min-width: 1024px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1024 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=2048 2x"
-                    media="(min-width: 768px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1024 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=2048 2x"
-                    media="(min-width: 768px)">
-
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=768 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1536 2x"
-                    media="(max-width: 768px)"
-                    type="image/webp">
-            <source srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=768 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1536 2x"
-                    media="(max-width: 768px)">
-
-            <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600"
-                 srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200 2x,
-                 //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200 2x"
-                 class="amp-ca-image-pic" {{#if imageAltText}} alt = "{{imageAltText}}" title="{{seoText}}" {{/if}}/>
-
-        {{/if}}
-    {{/roundelProperties}}
-</picture>
-{{#iff display '==' 'Hotspots'}}
-   <div class="amp-ca-image-actions" data-amp-image-actions="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}.json?metadata=true&v="></div>
-{{/iff}}
+        <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=1600{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?w=3200{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x,
+                 //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=1600{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 1x, //{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}?w=3200{{#iff display '==' 'Point of Interest'}}&$poi$&aspect=2.6:1{{/iff}}{{#roundelProperties}}&$roundel$&{{roundelConfig roundel}}{{/roundelProperties}}&upscale=false&fmt.jpeg.interlaced=true 2x" class="amp-ca-image-pic" {{#if imageAltText}} alt="{{imageAltText}}" {{/if}} {{#if seoText}} title="{{seoText}}" {{/if}} />
+        {{/iff}}
+    </picture>
+    {{#iff display '==' 'Hotspots'}}
+    <div class="amp-ca-image-actions" data-amp-image-actions="//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}.json?metadata=true&v="></div>
+    {{/iff}}
 </div>
-
