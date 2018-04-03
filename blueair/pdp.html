@@ -1,0 +1,1435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="gb-en" version="XHTML+RDFa 1.0" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+
+<head>
+    <!--[if IE]><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
+        function r(n) {
+            if (!t[n]) {
+                var o = t[n] = { exports: {} };
+                e[n][0].call(o.exports, function(t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports)
+            }
+            return t[n].exports
+        }
+        if ("function" == typeof __nr_require) return __nr_require;
+        for (var o = 0; o < n.length; o++) r(n[o]);
+        return r
+    }({
+        1: [function(e, t, n) {
+            function r() {}
+
+            function o(e, t, n) { return function() { return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this } }
+            var i = e("handle"),
+                a = e(2),
+                u = e(3),
+                c = e("ee").get("tracer"),
+                f = e("loader"),
+                s = NREUM;
+            "undefined" == typeof window.newrelic && (newrelic = s);
+            var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                d = "api-",
+                l = d + "ixn-";
+            a(p, function(e, t) { s[t] = o(d + t, !0, "api") }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() { return (new r).get() };
+            var m = r.prototype = {
+                createTracer: function(e, t) {
+                    var n = {},
+                        r = this,
+                        o = "function" == typeof t;
+                    return i(l + "tracer", [f.now(), e, n], r),
+                        function() { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try { return t.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], n), e } finally { c.emit("fn-end", [f.now()], n) } }
+                }
+            };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) { m[t] = o(l + t) }), newrelic.noticeError = function(e) { "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()]) }
+        }, {}],
+        2: [function(e, t, n) {
+            function r(e, t) {
+                var n = [],
+                    r = "",
+                    i = 0;
+                for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                return n
+            }
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}],
+        3: [function(e, t, n) {
+            function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r]; return i } t.exports = r
+        }, {}],
+        4: [function(e, t, n) { t.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}],
+        ee: [function(e, t, n) {
+            function r() {}
+
+            function o(e) {
+                function t(e) { return e && e instanceof r ? e : e ? c(e, u, i) : i() }
+
+                function n(n, r, o, i) { if (!d.aborted || i) { e && e(n, r, o); for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r); var p = s[y[n]]; return p && p.push([b, n, r, a]), a } }
+
+                function l(e, t) { v[e] = m(e).concat(t) }
+
+                function m(e) { return v[e] || [] }
+
+                function w(e) { return p[e] = p[e] || o(n) }
+
+                function g(e, t) { f(e, function(e, n) { t = t || "feature", y[n] = t, t in s || (s[t] = []) }) }
+                var v = {},
+                    y = {},
+                    b = { on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1 };
+                return b
+            }
+
+            function i() { return new r }
+
+            function a() {
+                (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+            }
+            var u = "nr@context",
+                c = e("gos"),
+                f = e(2),
+                s = {},
+                p = {},
+                d = t.exports = o();
+            d.backlog = s
+        }, {}],
+        gos: [function(e, t, n) {
+            function r(e, t, n) {
+                if (o.call(e, t)) return e[t];
+                var r = n();
+                if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) {}
+                return e[t] = r, r
+            }
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}],
+        handle: [function(e, t, n) {
+            function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) }
+            var o = e("ee").get("handle");
+            t.exports = r, r.ee = o
+        }, {}],
+        id: [function(e, t, n) {
+            function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() { return o++ }) }
+            var o = 1,
+                i = "nr@id",
+                a = e("gos");
+            t.exports = r
+        }, {}],
+        loader: [function(e, t, n) {
+            function r() {
+                if (!x++) {
+                    var e = h.info = NREUM.info,
+                        t = d.getElementsByTagName("script")[0];
+                    if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
+                    f(y, function(t, n) { e[t] || (e[t] = n) }), c("mark", ["onload", a() + h.offset], null, "api");
+                    var n = d.createElement("script");
+                    n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                }
+            }
+
+            function o() { "complete" === d.readyState && i() }
+
+            function i() { c("mark", ["domContent", a() + h.offset], null, "api") }
+
+            function a() { return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset }
+            var u = (new Date).getTime(),
+                c = e("handle"),
+                f = e(2),
+                s = e("ee"),
+                p = window,
+                d = p.document,
+                l = "addEventListener",
+                m = "attachEvent",
+                w = p.XMLHttpRequest,
+                g = w && w.prototype;
+            NREUM.o = { ST: setTimeout, SI: p.setImmediate, CT: clearTimeout, XHR: w, REQ: p.Request, EV: p.Event, PR: p.Promise, MO: p.MutationObserver };
+            var v = "" + location,
+                y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1071.min.js" },
+                b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                h = t.exports = { offset: u, now: a, origin: v, features: {}, xhrWrappable: b };
+            e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+            var x = 0,
+                E = e(4)
+        }, {}]
+    }, {}, ["loader"]);
+    </script>
+    <link href="https://www.blueair.com/sg/" rel="alternate" hreflang="en-sg" />
+    <link href="https://www.blueair.com/np/" rel="alternate" hreflang="en-np" />
+    <link href="https://www.blueair.com/nl/" rel="alternate" hreflang="nl-nl" />
+    <link href="https://www.blueair.com/nl-en/" rel="alternate" hreflang="en-nl" />
+    <link href="https://www.blueair.com/no/" rel="alternate" hreflang="nb-no" />
+    <link href="https://www.blueair.com/om/" rel="alternate" hreflang="en-om" />
+    <link href="https://www.blueair.com/ph/" rel="alternate" hreflang="en-ph" />
+    <link href="https://www.blueair.com/pl-en/" rel="alternate" hreflang="en-pl" />
+    <link href="https://www.blueair.com/pl/" rel="alternate" hreflang="pl-pl" />
+    <link href="https://www.blueair.com/qa-en/" rel="alternate" hreflang="en-qa" />
+    <link href="https://www.blueair.com/qa/" rel="alternate" hreflang="ar-qa" />
+    <link href="https://www.blueair.com/sa-en/" rel="alternate" hreflang="en-sa" />
+    <link href="https://www.blueair.com/sa/" rel="alternate" hreflang="ar-sa" />
+    <link href="https://www.blueair.com/se-en/" rel="alternate" hreflang="en-se" />
+    <link href="https://www.blueair.com/mk/" rel="alternate" hreflang="en-mk" />
+    <link href="https://www.blueair.com/ae-ar/" rel="alternate" hreflang="ar-ae" />
+    <link rel="shortcut icon" href="https://www.blueair.com/sites/all/themes/ba/favicon.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <link href="https://www.blueair.com/ye/" rel="alternate" hreflang="ar-ye" />
+    <link href="https://www.blueair.com/ye-en/" rel="alternate" hreflang="en-ye" />
+    <link href="https://www.blueair.com/us/" rel="alternate" hreflang="en-us" />
+    <link href="https://www.blueair.com/gb/" rel="alternate" hreflang="en-gb" />
+    <link href="https://www.blueair.com/ae/" rel="alternate" hreflang="en-ae" />
+    <link href="https://www.blueair.com/se/" rel="alternate" hreflang="sv-se" />
+    <link href="https://www.blueair.com/th/" rel="alternate" hreflang="th-th" />
+    <link href="https://www.blueair.com/th-en/" rel="alternate" hreflang="en-th" />
+    <link href="https://www.blueair.com/tw/" rel="alternate" hreflang="zh-tw" />
+    <link href="https://www.blueair.com/tw-en/" rel="alternate" hreflang="en-tw" />
+    <link href="https://www.blueair.com/ch/" rel="alternate" hreflang="de-ch" />
+    <link href="https://www.blueair.com/ch-en/" rel="alternate" hreflang="en-ch" />
+    <link href="https://www.blueair.com/my/" rel="alternate" hreflang="en-my" />
+    <link href="https://www.blueair.com/no-en/" rel="alternate" hreflang="en-no" />
+    <link href="https://www.blueair.com/mo/" rel="alternate" hreflang="zh-mo" />
+    <link href="https://www.blueair.com/europe/" rel="alternate" hreflang="en" />
+    <link href="https://www.blueair.com/au/" rel="alternate" hreflang="en-au" />
+    <link href="https://www.blueair.com/at-en/" rel="alternate" hreflang="en-at" />
+    <link href="https://www.blueair.com/at/" rel="alternate" hreflang="de-at" />
+    <link href="https://www.blueair.com/bh-en/" rel="alternate" hreflang="en-bh" />
+    <link href="https://www.blueair.com/bh/" rel="alternate" hreflang="ar-bh" />
+    <link href="https://www.blueair.com/be-en/" rel="alternate" hreflang="en-be" />
+    <link href="https://www.blueair.com/be/" rel="alternate" hreflang="fr-be" />
+    <link href="https://www.blueair.com/bg/" rel="alternate" hreflang="en-bg" />
+    <link href="https://www.blueair.com/ca/" rel="alternate" hreflang="en-ca" />
+    <link href="https://www.blueair.com/mo-en/" rel="alternate" hreflang="en-mo" />
+    <link href="https://www.blueair.com/cn/" rel="alternate" hreflang="en-cn" />
+    <link href="https://www.blueair.com/cy/" rel="alternate" hreflang="en-cy" />
+    <link href="https://www.blueair.com/eg-en/" rel="alternate" hreflang="en-eg" />
+    <link href="https://www.blueair.com/eg/" rel="alternate" hreflang="ar-eg" />
+    <link href="https://www.blueair.com/ca-fr/" rel="alternate" hreflang="fr-ca" />
+    <link href="https://www.blueair.com/fr-en/" rel="alternate" hreflang="en-fr" />
+    <link href="https://www.blueair.com/ie/" rel="alternate" hreflang="en-ie" />
+    <link href="https://www.blueair.com/lu/" rel="alternate" hreflang="de-lu" />
+    <link href="https://www.blueair.com/fr/" rel="alternate" hreflang="fr-fr" />
+    <link href="https://www.blueair.com/lu-en/" rel="alternate" hreflang="en-lu" />
+    <link href="https://www.blueair.com/kw/" rel="alternate" hreflang="ar-kw" />
+    <link href="https://www.blueair.com/kw-en/" rel="alternate" hreflang="en-kw" />
+    <link href="https://www.blueair.com/it/" rel="alternate" hreflang="en-it" />
+    <link href="https://www.blueair.com/nz/" rel="alternate" hreflang="en-nz" />
+    <link href="https://www.blueair.com/ir/" rel="alternate" hreflang="en-ir" />
+    <link href="https://www.blueair.com/id/" rel="alternate" hreflang="id-id" />
+    <link href="https://www.blueair.com/id-en/" rel="alternate" hreflang="en-id" />
+    <link href="https://www.blueair.com/in/" rel="alternate" hreflang="en-in" />
+    <link href="https://www.blueair.com/hk/" rel="alternate" hreflang="zh-hk" />
+    <link href="https://www.blueair.com/hk-en/" rel="alternate" hreflang="en-hk" />
+    <link href="https://www.blueair.com/de/" rel="alternate" hreflang="de-de" />
+    <link href="https://www.blueair.com/de-en/" rel="alternate" hreflang="en-de" />
+    <meta name="description" content="Air purification, innovated with love in Sweden. Our top-rated air purifiers feature HEPASilent technology &amp; are designed to fit your sense of style." />
+    <meta name="robots" content="follow, index" />
+    <meta name="keywords" content="air purifiers, air purifier filters, hepa air purifiers, hepa air filter, best air purifier, best hepa air purifier, top rated air purifiers, hepasilent, blueair, the best air purifier, home air quality, quiet air purifiers" />
+    <meta name="generator" content="Drupal 7 (http://drupal.org)" />
+    <link rel="canonical" href="https://www.blueair.com/gb/" />
+    <link rel="shortlink" href="https://www.blueair.com/gb/" />
+    <meta property="og:site_name" content="Blueair" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="https://www.blueair.com/gb/" />
+    <meta property="og:title" content="Blueair, best-in-class air purifiers from sweden" />
+    <meta property="og:updated_time" content="2018-02-08T09:25:07+00:00" />
+    <meta property="article:published_time" content="2016-02-10T13:31:22+00:00" />
+    <meta property="article:modified_time" content="2018-02-08T09:25:07+00:00" />
+    <title>Blueair | Whisper-silent air purification with style | Blueair</title>
+    <meta name="msvalidate.01" content="D6D188F8B6046117A5AB2E1D7FF5E641" />
+    <script type="text/javascript">
+    var base_path = '/';
+    var root_base_path = '/';
+    var current_language = 'gb';
+    var current_country = 'United Kingdom';
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://www.blueair.com/sites/default/files/advagg_css/css__LpfGhtEWax3LsFk4hVjMitNFrlWDxmyo7VVBDe_5bxY__Bjd_QA0I217MTZmkuuL4Ch9s7r7e0R3trLuQi9A-OrE__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" media="all" integrity="sha384-pdapHxIh7EYuwy6K7iE41uXVxGCXY0sAjBzaElYGJUrzwodck3Lx6IE2lA0rFREo" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://www.blueair.com/sites/default/files/advagg_css/css___0MmO9pjl04nZMds5uwPc22hApwNb2G1pg2pGPmhQhw__bwsp9YaPvETsaJFhWW6Djo7fkVKAhn6FbGOysiojSTA__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.css" media="all" />
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PFLG2Q');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script src="https://www.blueair.com/sites/default/files/js/js_cyt4tc9M0SlJJ9WS94memiKz9YvgqMQemK8UfNhs7rg.js"></script>
+    <!-- Amplience CSS -->
+    <link rel="stylesheet" href="../dist/renders/all/styles.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Amplience JS -->
+    <!-- All libs -->
+    <script src="../dist/renders/all/libs.min.js"></script>
+    <!-- All templates -->
+    <script src="../dist/renders/all/templates.min.js"></script>
+
+
+    <!-- Amplience Viewer files -->
+    <link rel="stylesheet" href="viewer/css/viewer.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="viewer/jquery-ui-custom.js"></script>
+    <script src="viewer/viewer.js"></script>
+</head>
+
+<body data-site-mode='live' class="html front not-logged-in no-sidebars page-node page-node- page-node-12 node-type-page i18n-gb-en  path-part-node  page-by-path--node-12  verify-cookie language-gb-en">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFLG2Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class='must_show_cookie'>
+        <div class='innerLayoutWrapper container'>
+            <div class='must_show_cookie-left'>
+                <p>
+                    <span class='must_show_cookie-circle'></span>We use <a href='/gb/privacy-policy'>cookies</a> to give you the best experience. If you do nothing we'll assume that it's OK.</p>
+            </div>
+            <div class='must_show_cookie-right'>
+                <p><span>Close &times;</span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function(w, d, t, r, u) {
+        var f, n, i;
+        w[u] = w[u] || [], f = function() {
+            var o = { ti: "5668748" };
+            o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+        }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function() {
+            var s = this.readyState;
+            s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+        }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+    })(window, document, "script", "https://bat.bing.com/bat.js", "uetq");
+    </script>
+    <noscript><img src="https://bat.bing.com/action/0?ti=5668748&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+    <!-- layoutWrapper -->
+    <div id="layoutWrapper">
+        <!-- primaryNavWrapper -->
+        <div id="primaryNavWrapper" class="hasHeaderImage">
+            <div class="innerLayoutWrapper">
+                <!-- Begin: Pseudo-Generated Code -->
+                <!-- navbar -->
+                <div class="navbar">
+                    <!-- navbar-inner -->
+                    <div class="navbar-inner">
+                        <!-- responsive-navbar -->
+                        <div id="responsive-navbar">
+                            <div id="mob-wrap" style="width:100%; float:right; display:none">
+                                <a href="/gb/" class="logo-mobile">
+                                   <img src="https://www.blueair.com/sites/all/themes/ba/resources/assets/images/logo.svg?v=1" alt="Logo" />
+                               </a>
+                                <a class="btn btn-navbar" title="Navigation">
+                                  <span class="btn-navbar-line"></span>
+                                  <span class="btn-navbar-line"></span>
+                                  <span class="btn-navbar-line"></span>
+                                </a>
+                                <div class="responsive-menu-icon">
+                                    <a id="mobile-search" title="Search" onclick="return false">
+                                        <!-- <img class="icon-search" src="https://www.blueair.com/sites/all/themes/oms_boilerplate/resources/assets/images/serach_icon.png" alt="search">  -->
+                                        <span class="header-footer-sprite serach_icon"></span>
+                                    </a>
+                                </div>
+                                <div class="responsive-menu-icon">
+                                    <a id='mobile-cart' title="Cart" href="/gb/cart">
+                                              <span class="header-footer-sprite cart_icon">&nbsp;</span>
+                                              <!-- <img src="https://www.blueair.com/sites/all/themes/oms_boilerplate/resources/assets/images/cart_icon.png" alt="cart"> -->
+                                              <small class="cart-counter"></small>
+                                                                                        </a>
+                                </div>
+                            </div>
+                            <span class="main-menu-chevron"></span>
+                            <div id="responsive-user-menu">
+                                <div class="arrow"></div>
+                                <ul id="menu-ecommerce-nav" class="">
+                                    <li class="first leaf has-children menu-mlid-4305">
+                                        <a href="/gb/user/login">Log In</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav-collapse">
+                                <!-- mobile icons -->
+                                <div>
+                                    <div class="responsive-menu-icon responsive-menu-icon-mobile">
+                                        <div class="col-xs-12 mobile-icons">
+                                            <a title="Store Locator" href="/gb/store-locator">
+                                        <span class="header-footer-sprite store_location_icon"></span>
+                                        <!--  <img src="https://www.blueair.com/sites/all/themes/oms_boilerplate/resources/assets/images/store_location_icon.png" alt="store Locator"> -->
+                                      </a>
+                                            <div id="mobile-lang-wrapper" style="display:none">
+                                                <!--<div class="mobile-select">
+                                          <span class="selected-language">
+                                                                                      </span>
+                                                                                        <select class='mobile-language-select'>
+<option  value='ae-en'>United Arab Emirates - English</option>
+<option  value='ae'> الإمارات العربيّة المتّحدة - اللغة العربية الفصحى الحديثة</option>
+<option  value='au-en'>Australia - English</option>
+<option  value='bh-en'>البحرين - اللغة العربية الفصحى الحديثة</option>
+<option  value='bh'>البحرين - اللغة العربية الفصحى الحديثة</option>
+<option  value='be-en'>Belgique - Anglais</option>
+<option  value='be'>Belgique - Français</option>
+<option  value='bg-en'>Bulgaria - English</option>
+<option  value='ca-en'>Canada - English</option>
+<option  value='ca'>Canada - Français</option>
+<option  value='cn-en'>China - English</option>
+<option  value='cy-en'>Cyprus - English</option>
+<option  value='cz-en'>Czech Republic - English</option>
+<option  value='dk-en'>Denmark - English</option>
+<option  value='de-en'>Germany - English</option>
+<option  value='de-de'>Deutschland - Deutsche</option>
+<option  value='ee-en'>Eesti - Inglise</option>
+<option  value='eg-en'>Egypt - English</option>
+<option  value='eg'>مصر - اللغة العربية الفصحى الحديثة</option>
+<option  value='es-en'>Spain - English</option>
+<option  value='fr-en'>France - English</option>
+<option  value='fr'>France - Français</option>
+<option  value='gr-en'>Greece - English</option>
+<option  value='hk-en'>Hong Kong - English</option>
+<option  value='hk'>香港 - 繁體中文</option>
+<option  value='hr-en'>Hrvatska - English</option>
+<option  value='in-en'>India - English</option>
+<option  value='id-en'>Indonesia - English</option>
+<option  value='id'>Indonesia - Bahasa Indonesia</option>
+<option  value='ir-en'>Iran - English</option>
+<option  value='ie-en'>Ireland - English</option>
+<option  value='it-en'>Italy - English</option>
+<option  value='jp-en'>Japan - English</option>
+<option  value='kr-en'>Korea - English</option>
+<option  value='kw-en'>Kuwait - English</option>
+<option  value='kw'> دولة الكويت - اللغة العربية الفصحى الحديثة</option>
+<option  value='lv-en'>Latvia - English</option>
+<option  value='lt-en'>Lithuania - English</option>
+<option  value='lu-en'>Luxembourg - English</option>
+<option  value='lu-de'>Luxemburg - Deutsche</option>
+<option  value='mo-en'>Macau - English</option>
+<option  value='mo'>澳門 - 繁體中文</option>
+<option  value='hu-en'>Hungary - English</option>
+<option  value='mk-en'>Macedonia - English</option>
+<option  value='my-en'>Malaysia - English</option>
+<option  value='nl-nl'>Nederland - Dutch</option>
+<option  value='nl-en'>Netherlands - English</option>
+<option  value='nz-en'>New Zealand - English</option>
+<option  value='no-en'>Norway - English</option>
+<option  value='no-nb'>Norge - Norsk</option>
+<option  value='ph-en'>Philippines - English</option>
+<option  value='pl-en'>Poland - English</option>
+<option  value='pl'>Polska - Polskie</option>
+<option  value='pt-en'>Polska -  język angielski</option>
+<option  value='qa-en'>Qatar - English</option>
+<option  value='qa'>قطر - اللغة العربية الفصحى الحديثة</option>
+<option  value='ro-en'>Romania - English</option>
+<option  value='sa-en'>Saudi Arabia - English</option>
+<option  value='sa'>المملكة العربية السعودية - اللغة العربية الفصحى الحديثة</option>
+<option  value='ch-en'>Switzerland - English</option>
+<option  value='ch-de'>Schweiz - Deutsche</option>
+<option  value='sg-en'>Singapore - English</option>
+<option  value='si-en'>Slovenia - English</option>
+<option  value='sk-en'>Slovakia - English</option>
+<option  value='fi-en'>Finland - English</option>
+<option  value='se-en'>Sweden - English</option>
+<option  value='se'>Sverige - Svenska</option>
+<option  value='tw-en'>Taiwan - English</option>
+<option  value='tw'>台灣 - 繁體中文</option>
+<option  value='th-en'>Thailand - English</option>
+<option  value='th'> เมืองไทย - ไทย</option>
+<option  value='gb-en'>United Kingdom - English</option>
+<option  value='us-en'>United States - English</option>
+<option  value='ye-en'>Yemen - English</option>
+<option  value='ye'>اليمن - اللغة العربية الفصحى الحديثة</option>
+<option  value='at-en'>Austria - English</option>
+<option  value='at-de'>Österreich - Deutsche</option>
+</select>
+                                                                                  </div>-->
+                                                <a href="/gb/select" class="mobile-select">
+                                          <span class="selected-language"></span>
+                                        </a>
+                                            </div>
+                                            <!-- <img class="responsive-user-menu" style="margin-left:10px;cursor:pointer;" src="https://www.blueair.com/sites/all/themes/oms_boilerplate/resources/assets/images/profile_icon.png" alt="cart">         -->
+                                            <a id="mobile-profile" onclick="return false">
+                                        <span style="cursor:pointer" class="responsive-user-menu header-footer-sprite profile_icon"></span>
+                                                                              </a>
+                                            <span class="user-menu-chevron"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- mobile icons -->
+                                <!-- primaryNav -->
+                                <div id="primaryNav" class="mightyMenu MightyMenu treeview">
+                                    <div class="region region-main-menu">
+                                        <div id="block-menu-block-2" class="block block-menu-block contextual-links-region">
+                                            <div class="content">
+                                                <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1 clearfix">
+                                                    <div class="col-md-2 logo-wrapper">
+                                                        <a href="/gb/" id="logo" class="">
+                                                        <img src="https://www.blueair.com/sites/all/themes/ba/resources/assets/images/logo.svg?v=1" alt="Logo" />
+                                                    </a>
+                                                    </div>
+                                                    <div class="menu-icons-wrapper col-md-2">
+                                                        <div id="changeCountryBlock" class="headerMenuIcons">
+                                                            <a href="/gb/select"><span class="icon icon-globe" title="Select Market"></span></a>
+                                                        </div>
+                                                        <div id="headerIconsWrapper">
+                                                            <div id="headerCarticon" class="headerMenuIcons">
+                                                                <a title="Cart" href="/gb/cart">
+                                                                          <span class="icon icon-cart"></span>
+                                                                          <small class="cart-counter"></small>
+                                                                        </a>
+                                                            </div>
+                                                            <div id="headerSearch" class="headerMenuIcons">
+                                                                <span class="before-search-chevron" style="cursor:pointer"></span>
+                                                                <a title="Search" onclick="return false" class="toggle-search"><span class="icon icon-search"></span></a>
+                                                            </div>
+                                                            <div id="headerStoreicon" class="headerMenuIcons">
+                                                                <a title="Store Locator" href="/gb/store-locator">
+                                                                    <span class="icon icon-location"></span>
+                                                                  </a>
+                                                            </div>
+                                                            <div id="headerUsericonLoggedOut" class="headerMenuIcons">
+                                                                <a title="My Account" href="/gb/user">
+                                                                    <span class="icon icon-user"></span>
+                                                                  </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="main-menu-wrapper" class="col-md-8">
+                                                        <ul id="main-menu" class="menu treeview navbar-nav">
+                                                            <li class="first leaf has-children menu-mlid-3336">
+                                                                <a href="/gb/air-purifiers">Air Purifiers</a>
+                                                            </li>
+                                                            <li class="first leaf has-children menu-mlid-3337">
+                                                                <a href="/gb/air-purifier-filters">Filters</a>
+                                                            </li>
+                                                            <li class="first leaf has-children menu-mlid-3745">
+                                                                <a href="/gb/air-monitors">Air Monitors</a>
+                                                            </li>
+                                                            <li class="first leaf has-children menu-mlid-5756">
+                                                                <a href="/gb/clean-air">Clean Air</a>
+                                                            </li>
+                                                            <li class="first leaf has-children menu-mlid-4284">
+                                                                <a href="/gb/customer-support">Support</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="new-language-selector">
+                                                    <div class="close-language-wrapper">
+                                                        <a href="" class="close-language-button"></a>
+                                                    </div>
+                                                    <div id="languageSelectionBlock">
+                                                        <ul class="lang">
+                                                            <li class="first-map current-country gb">
+                                                                <a class="lang-toggle" href="#">
+                                                                    <!--<img src="https://www.blueair.com/sites/all/themes/oms_boilerplate/resources/assets/images/locale/gb.png" alt="United Kingdom - English" />--><span class="flag-image-current">img</span> <span class="lang-toggle lang-toggle-disable"><img class="generallanguage-dropdown" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAtJREFUeNpjYEABAAAPAAEm8l7ZAAAAAElFTkSuQmCC"></span> </a>
+                                                                <ul class="lang-submenus">
+                                                                    <li class="CountryLanguageName  ae">
+                                                                        <a href="/ae-ar" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">United Arab Emirates</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/ae">English</a><a href="/ae-ar">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  au">
+                                                                        <a href="/au" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Australia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  bh">
+                                                                        <a href="/bh" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Bahrain</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/bh-en">English</a><a href="/bh">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  be">
+                                                                        <a href="/be" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Belgium</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/be-en">English</a><a href="/be">French</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  bg">
+                                                                        <a href="/bg" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Bulgaria</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ca">
+                                                                        <a href="/ca-fr" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Canada</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/ca">English</a><a href="/ca-fr">French</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  cn">
+                                                                        <a href="/cn" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Mainland China</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  cy">
+                                                                        <a href="/cy" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Cyprus</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  cz">
+                                                                        <a href="/cz" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Czech Republic</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  dk">
+                                                                        <a href="/dk" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Denmark</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  de">
+                                                                        <a href="/de" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Germany</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/de-en">English</a><a href="/de">German</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ee">
+                                                                        <a href="/ee" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Estonia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  eg">
+                                                                        <a href="/eg" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Egypt</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/eg-en">English</a><a href="/eg">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  es">
+                                                                        <a href="/es" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Spain</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  fr">
+                                                                        <a href="/fr" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">France</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/fr-en">English</a><a href="/fr">French</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  gr">
+                                                                        <a href="/gr" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Greece</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  hk">
+                                                                        <a href="/hk" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">China Hong Kong</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/hk-en">English</a><a href="/hk">Traditional Chinese</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  hr">
+                                                                        <a href="/hr" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Croatia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  in">
+                                                                        <a href="/in" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">India</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  id">
+                                                                        <a href="/id" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Indonesia</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/id-en">English</a><a href="/id">Indonesian</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ir">
+                                                                        <a href="/ir" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Iran</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ie">
+                                                                        <a href="/ie" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Ireland</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  it">
+                                                                        <a href="/it" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Italy</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  jp">
+                                                                        <a href="/jp" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Japan</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  kr">
+                                                                        <a href="/kr" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Korea</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  kw">
+                                                                        <a href="/kw" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Kuwait</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/kw-en">English</a><a href="/kw">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  lv">
+                                                                        <a href="/lv" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Latvia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  lt">
+                                                                        <a href="/lt" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Lithuania</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  lu">
+                                                                        <a href="/lu" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Luxembourg</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/lu-en">English</a><a href="/lu">German</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  mo">
+                                                                        <a href="/mo" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">China Macau</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/mo-en">English</a><a href="/mo">Traditional Chinese</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  hu">
+                                                                        <a href="/hu" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Hungary</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  mk">
+                                                                        <a href="/mk" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Macedonia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  my">
+                                                                        <a href="/my" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Malaysia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  nl">
+                                                                        <a href="/nl-en" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Netherlands</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/nl">Dutch</a><a href="/nl-en">English</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  nz">
+                                                                        <a href="/nz" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">New Zealand</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  no">
+                                                                        <a href="/no" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Norway</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/no-en">English</a><a href="/no">Norwegian</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ph">
+                                                                        <a href="/ph" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Philippines</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  pl">
+                                                                        <a href="/pl" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Poland</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/pl-en">English</a><a href="/pl">Polish</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  pt">
+                                                                        <a href="/pt" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Portugal</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  qa">
+                                                                        <a href="/qa" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Qatar</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/qa-en">English</a><a href="/qa">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ro">
+                                                                        <a href="/ro" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Romania</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  sa">
+                                                                        <a href="/sa" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Saudi Arabia</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/sa-en">English</a><a href="/sa">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ch">
+                                                                        <a href="/ch" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Switzerland</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/ch-en">English</a><a href="/ch">German</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  sg">
+                                                                        <a href="/sg" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Singapore</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  si">
+                                                                        <a href="/si" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Slovenia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  sk">
+                                                                        <a href="/sk" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Slovakia</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  fi">
+                                                                        <a href="/fi" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Finland</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  se">
+                                                                        <a href="/se" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Sweden</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/se-en">English</a><a href="/se">Swedish</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  tw">
+                                                                        <a href="/tw" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Taiwan</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/tw-en">English</a><a href="/tw">Traditional Chinese</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  th">
+                                                                        <a href="/th" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Thailand</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/th-en">English</a><a href="/th">Thai</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName CurrentCountryLanguage gb">
+                                                                        <a href="/gb" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">United Kingdom</span>
+                    </a><span class="checkmark"></span>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  us">
+                                                                        <a href="/us" class="">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">United States</span>
+                    </a>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  ye">
+                                                                        <a href="/ye" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Yemen</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/ye-en">English</a><a href="/ye">Modern Standard Arabic</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName  at">
+                                                                        <a href="/at" class="multi-lang">
+                        <span class="flag-image">img</span>
+                        <span class="languageNameMain">Austria</span>
+                    </a>
+                                                                        <div class="multi-lang-select"><a href="/at-en">English</a><a href="/at">German</a></div>
+                                                                    </li>
+                                                                    <li class="CountryLanguageName linebreak">
+                                                                        <hr/>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul><span class="countrycode"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mobileOnly">
+                                    </div>
+                                </div>
+                                <!-- /primaryNav -->
+                                <!-- responsive-nav-bottom -->
+                                <div class="responsive-nav-bottom">
+                                    <a class="responsive-nav-close" href="javascript:void(0);">Close</a>
+                                </div>
+                                <!-- /responsive-nav-bottom -->
+                            </div>
+                            <!-- nav-collapse -->
+                        </div>
+                        <!-- responsive-navbar -->
+                    </div>
+                    <!-- navbar-inner -->
+                </div>
+                <!-- navbar -->
+                <div class="clearer"></div>
+                <div class="searchbar--large">
+                    <div class="searchbar--inner">
+                        <div class="searchbar--placeholder">Search away</div>
+                        <div class="region region-main-menu-search">
+                            <div id="block-search-form" class="block block-search">
+                                <div class="content">
+                                    <form class="search-form form-search content-search" role="search" onsubmit="if(this.search_block_form.value==&#039;Search&#039;){ alert(&#039;Please enter a search&#039;); return false; }" action="/gb/" method="post" id="search-block-form" accept-charset="UTF-8">
+                                        <div>
+                                            <div class="container-inline">
+                                                <h2 class="element-invisible">Search form</h2>
+                                                <div class="input-group">
+                                                    <input title="Enter the terms you wish to search for." class="custom-search-box form-control form-text" placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" /><span class="input-group-btn"><button type="submit" class="btn btn-primary"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>
+                                                    </button>
+                                                    </span>
+                                                </div>
+                                                <div class="form-actions form-wrapper form-group" id="edit-actions">
+                                                    <button class="element-invisible btn btn-default form-submit" type="submit" id="edit-submit" name="op" value="GO">GO</button>
+                                                </div>
+                                                <input type="hidden" name="form_build_id" value="form-fzNGgyv857s_GEobDQIjautb_D_k0bVBvIoISQ3xmZM" />
+                                                <input type="hidden" name="form_id" value="search_block_form" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="searchbar--close">
+                      <span class="icon icon-close"></span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Pseudo-Generated Code -->
+        </div>
+        <!-- /primaryNavWrapper -->
+        <div class="clearer"></div>
+        <input type="hidden" id="current-language" current-language="/gb/" />
+    </div>
+
+    <!-- Amplience Content Written  in here..... -->
+                                    <div class="amp-product-viewer" id="amp-container" style="max-width: 800px;margin: auto;""></div>
+                                    <script>
+                    window.canUseWebP=function() {
+                        var elem = document.createElement('canvas');
+                        if (!!(elem.getContext && elem.getContext('2d'))) {
+                            // was able or not to get WebP representation
+                            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+                        }
+                        else {
+                            // very old browser like IE 8, canvas not supported
+                            return false;
+                        }
+                    }
+                </script>
+                <!-- Amplience PDP viewer Script -->
+    <script>
+    $(function() {
+
+        var roundel="empty";
+
+        var viewer = new amp.Viewer({
+            client: 'nmdemo',
+            imageBasePath: 'https://i1.adis.ws/',
+            set: '57471',
+            locale: 'en-gb',
+            cacheControl: Date.now(),
+            secure: true,
+            zoomInlineDoubleTap: false,
+            doubleTapTime: 250,
+            templates: {
+              thumb: 'fmt.jpeg.interlaced=true&w=85&h=85&qlt=60&fmt.jpeg.chroma=1,1,1&fmt=' + (window.canUseWebP() ? "webp" : "jpg"),
+              desktop: {
+                main: '$social$&$roundel$&roundelRatio=0.6&p3_img=' + roundel + 'fmt.jpeg.interlaced=true&w=374&h=374&qlt=70&fmt=' + (window.canUseWebP() ? "webp" : "jpg"),
+                mainRetina: '$social$&$roundel$&roundelRatio=0.6&p3_img=' + roundel + '&fmt.jpeg.interlaced=true&w=748&h=748&qlt=70&fmt=' + (window.canUseWebP() ? "webp" : "jpg")
+              },
+              desktopFull: {
+                main: 'fmt.jpeg.interlaced=true&w=1000&qlt=70&fmt=' + (window.canUseWebP() ? "webp" : "jpg"),
+                mainRetina: 'fmt.jpeg.interlaced=true&w=1500&qlt=70&fmt=' + (window.canUseWebP() ? "webp" : "jpg")
+              },
+              mobile: {
+                main: '$social$&$roundel$&roundelRatio=0.6&p3_img=' + roundel + '&fmt.jpeg.interlaced=true&w=500&h=500&qlt=60&fmt=' + (window.canUseWebP() ? "webp" : "jpg"),
+                mainRetina: '$social$&$roundel$&roundelRatio=0.6&p3_img=' + roundel + '&fmt.jpeg.interlaced=true&w=1000&h=1000&qlt=60&fmt=' + (window.canUseWebP() ? "webp" : "jpg")
+              }
+            },
+            initCallback: function() {
+                //alert("get rid...")
+                $(".amp-product-viewer-placeholderimg").remove();
+                if (this.currentView === "desktopFullView") {
+                    var videoData = null;
+                    for (var x = 0; x < this.tags.length; x++) {
+                        if (this.tags[x].alias === 'videoContainer') {
+                            var $tag = this.tags[x].$tag;
+                            videoData = $tag.data()['amp-ampVideo'] || $tag.data()['ampAmpVideo'];
+                            var player = videoData._player;
+                            player.ready(function() {
+                                player.currentResolution('High');
+                            });
+                        }
+                    }
+                }
+            },
+            errCallback: function() {
+                console.log('set call failed');
+            },
+            navIconsMain: {
+                next: 'icon icon-right main-next-test',
+                prev: 'icon icon-left main-prev-test'
+            },
+            navIconsNav: {
+                next: 'icon icon-right nav-next-test',
+                prev: 'icon icon-left nav-prev-test'
+            },
+            navIconsPortraitNav: {
+                next: 'icon icon-right navPortrait-next-test',
+                prev: 'icon icon-left navPortrait-next-test'
+            },
+            ampConfigs: {
+                mainContainerCarousel: {
+                    loop: true
+                },
+                mainContainerZoomInline: {
+                    scaleStep: 1
+                },
+                mainContainerSpin: {
+                    friction: 0.8
+                }
+            },
+            tooltips: {
+                offsets: {
+                    left: -102,
+                    top: -39
+                },
+                displayTime: 3000,
+
+            }
+        });
+
+        window.viewer = viewer;
+        var set = 0;
+    });
+    </script>
+    
+    <!-- /homepageContentWrapper -->
+    <div id="footer-wrapper">
+        <div class="container">
+            <div class="footer-content region-row">
+                <div class="footer-block collapsed block-blueair">
+                    <h3 class="title">Blueair</h3>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul id="menu-footer-quick-links-2" class="">
+                            <li class="first leaf has-children menu-mlid-3461">
+                                <a href="/gb/customer-support/unit-registration">Register unit</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-745">
+                                <a href="/gb/about">About Blueair</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-748">
+                                <a href="/gb/awards-and-reviews">Awards</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-797">
+                                <a href="/gb/why-blueair">Why Blueair?</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-2501">
+                                <a href="http://career.blueair.com">Careers</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-2906">
+                                <a href="/gb/store-locator">Store locator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-legal">
+                    <h3 class="title">Legal</h3>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul>
+                            <li><a href="/gb/terms-of-service">Terms of Service</a></li>
+                            <li><a href="/gb/warranty">Warranty</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-support">
+                    <a href="/gb/customer-support"><h3 class="title">Support</h3></a>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul id="menu-footer-quick-links-6" class="">
+                            <li class="first leaf has-children menu-mlid-4311">
+                                <a href="/gb/customer-support/faq">FAQ</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-4310">
+                                <a href="/gb/customer-support/instruction-manuals">Instruction manuals</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-4314">
+                                <a href="/gb/customer-support/quick-guides">Quick guides</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-4316">
+                                <a href="/gb/customer-support/videos">Video tutorials</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-4313">
+                                <a href="/gb/glossary">Glossary</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-6397">
+                                <a href="/gb/customer-support/unit-registration">Register for extended warranty</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-products">
+                    <h3 class="title">Products</h3>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul id="menu-footer-quick-links-3" class="">
+                            <li class="first leaf has-children menu-mlid-3460">
+                                <a href="/gb/air-purifiers">Air purifiers</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-759">
+                                <a href="/gb/air-purifier-filters">Filters</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-10213">
+                                <a href="/gb/air-monitors">Air monitors</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-10212">
+                                <a href="/gb/accessories">Accessories</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-social_media">
+                    <h3 class="title">Follow us</h3>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <div class="region region-social-media-block">
+                            <div id="block-blueair-social-media-block" class="block block-blueair">
+                                <div class="content">
+                                    <div id="socialNetworksWrapper">
+                                        <h3 class="title">Follow us</h3>
+                                        <ul id="menu-social-networks">
+                                            <li class="first">
+                                                <a href="https://www.facebook.com/BlueairGlobe" class="facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="icon icon-facebook"></span>
+                    </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="https://twitter.com/blueairglobe" class="twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="icon icon-twitter"></span>
+                    </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="https://www.youtube.com/user/BlueairTube" class="youtube" target="_blank" rel="noopener noreferrer">
+                        <span class="icon icon-youtube"></span>
+                    </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="https://www.instagram.com/blueairab/" class="instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="icon icon-instagram"></span>
+                    </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h3 class="title hidden-xs hidden-sm magazine-title">Blueair Life Magazine</h3>
+                    <div class="footer-block-content hidden-xs hidden-sm">
+                        <a href="https://www.blueair.com/life/" target="_blank">
+                            Read latest issue &raquo;                            <!--img src="https://www.blueair.com/sites/all/themes/ba/css/images/Blueair_Life_Magazine1.png" alt="Blueair Life" style="margin-top: 10px" /-->
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-dealers_and_distributors">
+                    <h3 class="title">Dealers and Distributors</h3>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul id="menu-footer-quick-links-5" class="">
+                            <li class="first leaf has-children menu-mlid-6528">
+                                <a href="/gb/user?destination=extranet">Dealer/Distributor login</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-3459">
+                                <a href="/gb/dealer-support">Become a dealer/distributor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-contact_information">
+                    <a href="/gb/contact-us"><h3 class="title">Contact us</h3></a>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <div class="region region-contact-information">
+                            <div id="block-blueair-get-in-touch-footer" class="block block-blueair">
+                                <h3 class="title">
+    <a href="/gb/contact-us">Contact us</a></h3>
+                                <div class="content">
+                                    <div class="singleAddressInFooter"><span class="businessName">Blueair AB</span>
+                                        <br /><span class="addressFull">
+                Visiting address: Karlavägen 108, 115 26  <br />
+                Postal address: Postbox 24275, 104 51<br />
+            </span>
+                                        <p>Stockholm</p>
+                                        <div class="hidden-xs">
+                                            <div class="phone" itemscope itemtype="http://schema.org/LocalBusiness">
+                                                <h3 class="title" itemprop="name">Telephone</h3>
+                                                <span itemprop="telephone"><a href="tel:+4686794500">+46 8 679 45 00</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="visible-xs">
+                                            <a class="readMore" href="tel:+46 8 679 45 00">Call +46 8 679 45 00</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- emailSignupWrapper -->
+                <div id="emailSignupWrapper" class="emailSignupCol col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div id="contactInformationWrapper">
+                        <div class="region region-contact-information">
+                            <div class="region region-contact-information">
+                                <div id="block-blueair-get-in-touch-footer" class="block block-blueair">
+                                    <h3 class="title">
+    <a href="/gb/contact-us">Contact us</a></h3>
+                                    <div class="content">
+                                        <div class="singleAddressInFooter"><span class="businessName">Blueair AB</span>
+                                            <br /><span class="addressFull">
+                Visiting address: Karlavägen 108, 115 26  <br />
+                Postal address: Postbox 24275, 104 51<br />
+            </span>
+                                            <p>Stockholm</p>
+                                            <div class="hidden-xs">
+                                                <div class="phone" itemscope itemtype="http://schema.org/LocalBusiness">
+                                                    <h3 class="title" itemprop="name">Telephone</h3>
+                                                    <span itemprop="telephone"><a href="tel:+4686794500">+46 8 679 45 00</a></span>
+                                                </div>
+                                            </div>
+                                            <div class="visible-xs">
+                                                <a class="readMore" href="tel:+46 8 679 45 00">Call +46 8 679 45 00</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-block collapsed block-news">
+                    <a href="/gb/news"><h3 class="title">News</h3></a>
+                    <div class="footer-block-content">
+                        <a href="#" class="close-button">&times;</a>
+                        <ul id="menu-footer-quick-links-8" class="">
+                            <li class="first leaf has-children menu-mlid-7788">
+                                <a href="/gb/news/blog">Blog</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-7789">
+                                <a href="/gb/news/press-release">Press Releases</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-7790">
+                                <a href="/gb/news/social-media">Social Media</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-8866">
+                                <a href="/gb/news/life">Blueair Life</a>
+                            </li>
+                            <li class="first leaf has-children menu-mlid-12245">
+                                <a href="/gb/news/point-of-view">Point of view</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="footer-footer">
+                <ul class="site-footer-text">
+                    <li>Copyright 2018 Blueair. All rights reserved</li>
+                    <li><a href="/gb/sitemap">Sitemap</a></li>
+                    <li><a href="/gb/privacy-policy">Privacy Policy</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__G38ASTxQem305X-ltfsOEA0-89MkpPQlSTCQBV89wD0__Ip0Y3H7K82XpXzfzHklUuFHVdb55TL0vpGyyOPvKivg__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__t0FPF3NWbgYlBgQ2mnlJd8YXJ5h6wHah_PfxEyN07xk__QXpb3DTw4X0df0vetX68nn1EhQpbVouRudBZzkbQXJo__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    (function($) {
+        $(document).ready(function() {
+
+            if ($(window).width() <= 1000) {
+                VideoWidth = $(window).width();
+            } else {
+                VideoWidth = 1000;
+            }
+
+            var VideoHeight = ((VideoWidth / 16) * 9); //  Keep aspect ratio
+
+            $(".video_popup").colorbox({
+                iframe: true,
+                innerWidth: VideoWidth,
+                innerHeight: VideoHeight
+            });
+
+
+        });
+
+        $(window).resize(function() {
+            var VideoWidth;
+            var ColorBox = $("#colorbox");
+            var ColorBoxWrapper = $("#cboxWrapper");
+            if (ColorBox.width() <= 1000) {
+                VideoWidth = ColorBox.width();
+            } else {
+                VideoWidth = 1000;
+            }
+
+            var VideoHeight = ((VideoWidth / 16) * 9); //  Keep aspect ratio
+
+            ColorBoxWrapper.colorbox.resize({ innerWidth: VideoWidth, innerHeight: VideoHeight });
+        });
+
+        //  Autoplay fix for chrome
+        $(window).load(function() {
+            var videoPlayer = $("#video-player");
+            if (videoPlayer.length) {
+                videoPlayer.get(0).play();
+            }
+        })
+    })(jQuery);
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__i11V-7AETPhfL9YzRpXBpECwVkYyQ_ahu2eHxES_mK0__AXOPhchCc8rks5Oj8q6ca6kvFPfZvWueAugL8Ai5FfU__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script>
+    (function(w, d, t, r, u) {
+        var f, n, i;
+        w[u] = w[u] || [], f = function() {
+            var o = { ti: "5668748" };
+            o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+        }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function() {
+            var s = this.readyState;
+            s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+        }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+    })(window, document, "script", "https://bat.bing.com/bat.js", "uetq");
+    </script>
+    <noscript><img src="https://bat.bing.com/action/0?ti=5668748&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__T73ujsOjK-1cyTby7fEe8eK8r1o3_6UM-pyXbhgxLPM__Er9Pl0iaRl_z6uZkma18_eq_XrZDZD41SKOnhtIv2nY__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha384-pPttEvTHTuUJ9L2kCoMnNqCRcaMPMVMsWVO+RLaaaYDmfSP5//dP6eKRusbPcqhZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__UmMWpocRtuHavUcmXyvz57olboMHy-bYZ6TnIK89Wmc__7kqmeQA2338ed_byRmbJMvLiIjhXCwsMAX7Yfhc8H5c__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+
+    jQuery(document).ready(function() {
+        jQuery(".cart-counter").html("");
+    });
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__i6OmJOyzmMUcaGH-e6cNCMGdGDGPDXY8rkI03cO8RNI__rtdfJS8NKf8_U77joSpJFd9lhY8fSlW-AnCcyY9RCzw__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+
+    jQuery(document).ready(function() {
+        if (jQuery().tooltip) {
+            jQuery(".menu-icons-wrapper div a").tooltip({
+                show: { delay: 0 },
+                create: function(ev, ui) {
+                    jQuery(this).data("ui-tooltip").liveRegion.remove();
+                }
+            });
+        }
+    });
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__BkwoCKKusgRbyN47r8RWTgR-Bz6wd0X4d6xwK2_iAM0__TpIRfE22rDZ6H6657ewt6fRw9ADosBC-chV0gwbM32c__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+
+    (function($) {
+        $(document).ready(function() {
+            $(".must_show_cookie-right span").click(function(e) {
+                e.preventDefault();
+                document.cookie = "Drupal_visitor_cookie2=1; expires=Fri, 1 Jan 2100 12:00:00 UTC; path=/";
+                $(".must_show_cookie").hide();
+                $("body").removeClass("verify-cookie");
+            });
+        });
+    })(jQuery);
+    //--><!]]>
+    </script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+
+
+    function link_track(url, uid, ref) {
+        var base_path = "/";
+
+        jQuery.ajax({
+            type: "POST",
+            data: {
+                link: url,
+                uid: uid,
+                ref: ref,
+            },
+            dataType: "json",
+            url: base_path + "link_track.php",
+            success: function(result) {
+                //console.log(result);
+            }
+        });
+    }
+
+
+    (function($) {
+        $(document).ready(function() {
+            $('#block-oms-flexslider-2 li').live('click', function() {
+                var url = $(this).children('a').attr('href');
+                link_track(url, Drupal.settings.currentUserUid, Drupal.settings.referrer);
+            });
+        });
+    })(jQuery);
+
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__Viy7vrnh_dou4BBdpOQzGpXngKsr3-K65B8pmt_VZ3E__MFWAG809mj0QwsH2iipZkPkGMBwiZ_Pg0F8doYP4Ec8__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript" src="https://www.blueair.com/sites/default/files/advagg_js/js__e-Vs_X32yiHmbjEHXnniOQHdAiypqx9OZ-uB2Wm17qU__fgjZ0V8vLcjObZQVEB2tG3A_q-9n09Xjp2P3Z9Ej504__wBCv4Yjjbm8Gbi5eQcuCrKXDx0bhmEiI5_KAZ3SohP8.js"></script>
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    jQuery.extend(Drupal.settings, { "basePath": "\/", "pathPrefix": "gb\/", "ajaxPageState": { "theme": "ba", "theme_token": "oVq9Gk8xPG2b1BzBG3V6WIZQbhSd8U2K6NhSYDnGYjM", "jquery_version": "1.9", "js": { "misc\/ajax.js": 1, "sites\/all\/modules\/jquery_update\/js\/jquery_update.js": 1, "\/\/cdn.jsdelivr.net\/bootstrap\/3.3.5\/js\/bootstrap.min.js": 1, "sites\/all\/modules\/language_location\/js\/language_location.js": 1, "sites\/all\/modules\/namhost\/support_tool\/js\/jquery-ui.js": 1, "sites\/all\/modules\/namhost\/support_tool\/js\/jquery-ui-timepicker-addon.js": 1, "sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js": 1, "sites\/all\/modules\/colorbox\/js\/colorbox.js": 1, "sites\/all\/modules\/dhtml_menu\/dhtml_menu.js": 1, "sites\/all\/modules\/prevent_js_alerts\/prevent_js_alerts.js": 1, "sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js": 1, "sites\/all\/modules\/uc_ajax_cart_alt\/uc_ajax_cart_alt.js": 1, "sites\/all\/themes\/oms_boilerplate\/resources\/js\/qtip\/jquery.qtip.min.js": 1, "sites\/all\/modules\/namhost\/unit_registration\/assets\/jquery-labelauty.js": 1, "sites\/all\/modules\/namhost\/unit_registration\/assets\/select2.min.js": 1, "sites\/all\/modules\/custom_search\/js\/custom_search.js": 1, "sites\/all\/libraries\/flexslider\/jquery.flexslider.js": 1, "sites\/all\/modules\/custom\/oms_sidebar_widgets\/js\/vendor\/prettyPhoto\/js\/jquery.prettyPhoto.js": 1, "sites\/all\/themes\/ba\/resources\/js\/jquery_js\/jquery-migrate-1.4.1.js": 1, "sites\/all\/themes\/ba\/resources\/js\/jquery_js\/jquery.treeview\/jquery.treeview.js": 1, "sites\/all\/themes\/ba\/resources\/js\/orbit_js\/ba.js": 1, "sites\/all\/themes\/ba\/resources\/js\/causality.js": 1, "sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js": 1, "sites\/all\/modules\/namhost\/unit_registration\/assets\/unit_registration.js": 1, "sites\/all\/modules\/pdf_export\/js\/pdf_export.js": 1, "sites\/all\/themes\/bootstrap\/js\/bootstrap.js": 1, "sites\/all\/themes\/ba\/resources\/js\/qtip\/jquery.qtip.min.js": 1, "sites\/all\/modules\/contrib\/oms_flexslider\/js\/addslider.js": 1 }, "css": { "modules\/system\/system.base.css": 1, "sites\/all\/modules\/contrib\/date\/date_api\/date.css": 1, "modules\/field\/theme\/field.css": 1, "sites\/all\/modules\/contrib\/namhost_contact_us_popup\/css\/namhost_contact_us_popup.css": 1, "modules\/node\/node.css": 1, "sites\/all\/modules\/namhost\/product_manager\/includes\/css\/table-style.css": 1, "sites\/all\/modules\/rating_snapshot\/css\/basic_styling.css": 1, "sites\/all\/modules\/namhost\/support_tool\/css\/jquery-ui.css": 1, "sites\/all\/modules\/ubercart\/uc_order\/uc_order.css": 1, "sites\/all\/modules\/ubercart\/uc_product\/uc_product.css": 1, "sites\/all\/modules\/ubercart\/uc_store\/uc_store.css": 1, "sites\/all\/modules\/wfm\/styles.css": 1, "sites\/all\/modules\/contrib\/views\/css\/views.css": 1, "sites\/all\/modules\/custom\/oms_pageblocks\/css\/oms_pageblocks.css": 1, "sites\/all\/modules\/custom\/oms_pageblocks\/css\/oms_pageblock_image.css": 1, "sites\/all\/modules\/custom\/oms_sidebar_widgets\/js\/vendor\/prettyPhoto\/css\/prettyPhoto.css": 1, "sites\/all\/libraries\/colorbox\/example3\/colorbox.css": 1, "sites\/all\/modules\/contrib\/ctools\/css\/ctools.css": 1, "sites\/all\/modules\/dhtml_menu\/dhtml_menu.css": 1, "sites\/all\/themes\/oms_boilerplate\/resources\/css\/qtip\/jquery.qtip.min.css": 1, "sites\/all\/modules\/namhost\/unit_registration\/assets\/jquery-labelauty.css": 1, "sites\/all\/modules\/namhost\/unit_registration\/assets\/select2.min.css": 1, "sites\/all\/modules\/custom_search\/custom_search.css": 1, "sites\/all\/libraries\/flexslider\/flexslider.css": 1, "sites\/all\/themes\/ba\/resources\/css\/qtip\/jquery.qtip.min.css": 1, "\/\/cdn.jsdelivr.net\/bootstrap\/3.3.5\/css\/bootstrap.min.css": 1, "sites\/all\/themes\/bootstrap\/css\/3.3.5\/overrides.min.css": 1, "sites\/all\/themes\/ba\/css\/style.css": 1, "sites\/all\/themes\/ba\/css\/blue.css": 1, "sites\/all\/themes\/ba\/css\/responsive.css": 1, "sites\/all\/themes\/ba\/css\/causality.css": 1 } }, "colorbox": { "opacity": "0.85", "current": "{current} of {total}", "previous": "\u00ab Prev", "next": "Next \u00bb", "close": "Close", "maxWidth": "98%", "maxHeight": "98%", "fixed": true, "mobiledetect": true, "mobiledevicewidth": "480px" }, "dhtmlMenu": { "nav": "none", "animation": { "effects": { "height": "height", "opacity": "opacity", "width": 0 }, "speed": "500" }, "effects": { "siblings": "close-same-tree", "children": "none", "remember": "" }, "filter": { "type": "whitelist", "list": { "menu-dealer-menu-2": "menu-dealer-menu-2", "devel": 0, "main-menu": 0, "management": 0, "menu-ecommerce-nav": 0, "menu-footer-quick-links-1": 0, "menu-footer-quick-links-2": 0, "menu-footer-quick-links-3": 0, "menu-footer-quick-links-4": 0, "menu-footer-quick-links-5": 0, "menu-social-networks": 0, "navigation": 0, "shortcut-set-1": 0, "user-menu": 0 } } }, "prevent_js_alerts": { "module_path": "sites\/all\/modules\/prevent_js_alerts" }, "linkSelector": "li[class|=\u0022menu\u0022] \u003E a[href$=\u0022\/cart\u0022],ul.menu \u003E li \u003E a[href$=\u0022\/cart\u0022]", "removeLink": 1, "ucAjaxCartAlt": { "linkSelector": "li[class|=\u0022menu\u0022] \u003E a[href$=\u0022\/cart\u0022],ul.menu \u003E li \u003E a[href$=\u0022\/cart\u0022]", "removeLink": 1 }, "current_language": "gb", "current_country": "United Kingdom", "custom_search": { "form_target": "_self", "solr": 1 }, "oms_flexslider": { "flexvalues": { "animation": "slide", "direction": "horizontal", "reverse": false, "animationLoop": true, "smoothHeight": false, "startAt": 0, "slideshow": true, "slideshowSpeed": 5000, "animationSpeed": 600, "pauseOnAction": true, "pauseOnHover": false, "useCSS": true, "touch": false, "video": false, "controlNav": true, "directionNav": false, "prevText": "Previous", "nextText": "Next", "keyboard": false, "pausePlay": false, "pausetext": "Pause", "playText": "Play" }, "sliderid": "oms_flexslider-2" }, "urlIsAjaxTrusted": { "\/gb\/": true }, "currentUserUid": 0, "referrer": "\/gb", "bootstrap": { "anchorsFix": "0", "anchorsSmoothScrolling": "0", "formHasError": 1, "popoverEnabled": 1, "popoverOptions": { "animation": 1, "html": 0, "placement": "right", "selector": "", "trigger": "click", "triggerAutoclose": 1, "title": "", "content": "", "delay": 0, "container": "body" }, "tooltipEnabled": 1, "tooltipOptions": { "animation": 1, "html": 0, "placement": "auto left", "selector": "", "trigger": "hover focus", "delay": 0, "container": "body" } } });
+    //--><!]]>
+    </script>
+    <script src="https://www.devtools.co.za/monitor.php?key=DNALWABVUU6GSB5KZMLGKZ48CE3HKN3T00000001"></script>
+    <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "e438b7b4fb", "applicationID": "61512217", "transactionName": "NgRTZUIAChcCAEJbDg9OZENZTg0KBwZOHBEJEQ==", "queueTime": 0, "applicationTime": 8, "atts": "GkNQEwoaGRk=", "errorBeacon": "bam.nr-data.net", "agent": "" }
+    </script>
+</body>
+
+</html>

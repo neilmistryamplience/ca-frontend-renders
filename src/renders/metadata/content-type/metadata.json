@@ -17,9 +17,9 @@
       "items": {
         "type": "string",
         "enum": [
-          "segment 1",
-          "segment 2",
-          "segment 3",
+          "New Customer",
+          "Existing Customer",
+          "Filter Club Member",
           "segment 4",
           "segment 5",
           "segment 6"
