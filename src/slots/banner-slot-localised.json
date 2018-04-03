@@ -1,0 +1,68 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/slots/banner-slot-localised.json",
+  "title": "Localised Banner Slot",
+  "description": "Slot that allows a Banner by locale",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "Content_en-GB": {
+      "title": "Content (en-GB)",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "banner": {
+              "title": "banner",
+              "enum": [
+                "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Content_fr-FR": {
+      "title": "Content (en-FR)",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "banner": {
+              "title": "banner",
+              "enum": [
+                "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Content_de-DE": {
+      "title": "Content (de-DE)",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "banner": {
+              "title": "banner",
+              "enum": [
+                "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
