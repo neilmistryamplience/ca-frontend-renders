@@ -29,7 +29,7 @@
       ]
     },
     "Content_fr-FR": {
-      "title": "Content (en-FR)",
+      "title": "Content (fr-FR)",
       "allOf": [
         {
           "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
