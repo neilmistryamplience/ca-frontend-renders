@@ -24,7 +24,8 @@
               "contentType": {
                 "title": "",
                 "enum": [
-                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsSlide/content-type/dixonsSlide.json"
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsSlide/content-type/dixonsSlide.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/dixonsBanner/content-type/dixonsBanner.json"
                 ]
               }
             }

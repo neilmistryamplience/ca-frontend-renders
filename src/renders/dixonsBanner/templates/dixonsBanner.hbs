@@ -1,9 +1,19 @@
-<div class="amp-ca-banner js_ca_banner">
+<div class="amp-ca-dixonsBanner js_ca_banner {{#if bannerStyle}}{{bannerStyle}}{{else}}blue-purple{{/if}}">
     {{#with img}}
-        <div class="amp-ca-banner-pic-wrap">
-            {{dynamicTemplate renderTypes.image renderTypes this}}
-        </div>
+        {{#if this.image}}
+            <div class="img-fill" style="background-image:url('//{{image.defaultHost}}/i/{{image.endpoint}}/{{image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp?h=200');">
+            </div>
+        {{/if}}
     {{/with}}
+    
+
+    <!--{{#with img}}
+        {{#if this.image}}
+            <div class="amp-ca-banner-pic-wrap">
+                {{dynamicTemplate renderTypes.image renderTypes this}}
+            </div>
+        {{/if}}
+    {{/with}} -->
     <div class="amp-ca-banner-info-wrap
     {{#if stackMobileLayout}}amp-ca-info-bottom{{/if}}
         {{#unless header}}
@@ -17,7 +27,7 @@
         {{/unless}}"
          data-align="{{#if alignment}}{{alignment}}{{else}}left{{/if}}">
 
-        <div class="amp-ca-banner-info" style="{{#bannerConfig}} {{/bannerConfig}}">
+        <div class="amp-ca-banner-info" >
             {{#if header}}
                 <div class="amp-ca-banner-header">{{header}}</div>
             {{/if}}
@@ -29,7 +39,7 @@
             {{/if}}
             {{#if button.label}}
                 <a href="{{button.url}}"
-                   class="amp-ca-banner-button readMore {{#if style}}{{style}}{{/if}}">{{button.label}}</a>
+                   class="amp-ca-banner-button {{#if style}}{{style}}{{/if}}">{{button.label}}</a>
             {{/if}}
         </div>
     </div>
