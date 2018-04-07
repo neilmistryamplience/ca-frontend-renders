@@ -8,17 +8,19 @@
         </div>
         {{/each}} {{#if blogdate}}
         <div class="amp-ca-blogdate">{{blogdate}}</div>
-        {{/if}} {{#if author}}
+        {{/if}} 
+        {{#if image}}
+        <div class="amp-ca-image">
+            {{dynamicTemplate ../../renderTypes.image ../../renderTypes image}}
+        </div>
+        {{/if}}
+        {{#if author}}
         <div class="amp-ca-author">{{author}}</div>
         {{/if}} {{#if title}}
         <div class="amp-ca-title">{{title}}</div>
         {{/if}} {{#if description}}
         <div class="amp-ca-description">{{description}}</div>
-        {{/if}} {{#if image}}
-        <div class="amp-ca-image">
-            {{dynamicTemplate ../../renderTypes.image ../../renderTypes image}}
-        </div>
-        {{/if}}
+        {{/if}} 
     </div>
     {{/with}} {{#if snippet}}
     <div class="amp-ca-blocks-container">
