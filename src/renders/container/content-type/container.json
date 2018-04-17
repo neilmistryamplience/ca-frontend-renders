@@ -1,0 +1,44 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/container/content-type/container.json",
+  "title": "Container",
+  "description": "A re-usable container for all content types",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "contentTypes": {
+      "type": "array",
+      "title": "Content Type",
+      "description": "Select and order content to display in the container",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/slider/content-type/slider.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/video/content-type/video.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/text/content-type/text.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/externalBlock/content-type/externalBlock.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/splitBlock/content-type/splitBlock.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/image/content-type/image.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/cardList/content-type/cardList.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/banner/content-type/banner.json",
+                  "https://raw.githubusercontent.com/neilmistryamplience/ca-frontend-renders/master/src/renders/blogList/content-type/blogList.json"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

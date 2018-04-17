@@ -213,7 +213,7 @@
                 video: ['fixVideoButton'],
                 splitBlock: ['fixVideoButton'],
                 blog: ['fixVideoButton'],
-                page: ['fixVideoButton', 'fixAndroidSwipeOverTheVideo'],
+                container: ['fixVideoButton', 'fixAndroidSwipeOverTheVideo'],
             },
             handlers: {
                 fixAndroidSwipeOverTheVideo: function() {

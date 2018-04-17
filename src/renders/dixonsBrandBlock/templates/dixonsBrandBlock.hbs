@@ -1,36 +1,20 @@
-<div class="amp-ca-banner js_ca_banner">
+<section id="product" class="soundtouchsoundbar">
     {{#with img}}
         <div class="amp-ca-banner-pic-wrap">
             {{dynamicTemplate renderTypes.image renderTypes this}}
         </div>
     {{/with}}
-    <div class="amp-ca-banner-info-wrap
-    {{#if stackMobileLayout}}amp-ca-info-bottom{{/if}}
-        {{#unless header}}
-            {{#unless subheader}}
-                {{#unless description}}
-                    {{#unless button.label}}
-                        amp-ca-hide
-                     {{/unless}}
-                {{/unless}}
-            {{/unless}}
-        {{/unless}}"
-         data-align="{{#if alignment}}{{alignment}}{{else}}left{{/if}}">
+    <article class="rightbox">
+        {{#if new}}<div class="newlabel">NEW</div>{{/if}}
+        <h3>{{header}}</h3>
+        <h4>{{subheader}}</h4>
 
-        <div class="amp-ca-banner-info" style="{{#bannerConfig}} {{/bannerConfig}}">
-            {{#if header}}
-                <div class="amp-ca-banner-header">{{header}}</div>
-            {{/if}}
-            {{#if subheader}}
-                <div class="amp-ca-banner-subheader">{{subheader}}</div>
-            {{/if}}
-            {{#if description}}
-                <div class="amp-ca-banner-description">{{description}}</div>
-            {{/if}}
-            {{#if button.label}}
-                <a href="{{button.url}}"
-                   class="amp-ca-banner-button readMore {{#if style}}{{style}}{{/if}}">{{button.label}}</a>
-            {{/if}}
-        </div>
-    </div>
-</div>
+        <img src="https://currys-ssl.cdn.dixons.com/css/themes/Bose/img/Wifi-Bluetooth-Logo.png" alt="Bluetooth" />
+        {{description}}
+        {{#with button}}
+        <a href="{{url}}" title="{{label}} {{../header}}">
+            <button class="black">{{label}} <i class="icon-chevron-right"></i></button>
+        {{/with}}
+        </a>
+    </article>
+</section>
